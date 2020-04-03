@@ -29,7 +29,7 @@ const sampleData = [
     product_reviews: [
       {
         body: "Most valuable shirt EVER purchased. It's just amazing. We feel like royalty.",
-        date: 06 - 6 - 2019,
+        date: 06 - 06 - 2019,
         rating: 5
       }
     ],
@@ -65,7 +65,7 @@ const sampleData = [
     product_reviews: [
       {
         body: "Waste of money. The upper part of the hoodie fit fine. However, the waist line was too short and felt awkward. On top of that, after one wash the color faded. I just gave up after that....smh. I have purchased Hanes products before and never experienced this. I was unable to send back because I did not open until after the option to return was up. I dont recommend item.",
-        date: 08 - 1 - 2019,
+        date: 08 - 01 - 2019,
         rating: 1
       }
     ],
@@ -83,7 +83,7 @@ const sampleData = [
     product_reviews: [
       {
         body: "I was indecisive on what size to get and I went through all of the questions and reviews to see if anyone who was similar to me provided any helpful info. No one did. So I hope this helps someone. I'm a 5'5 200lb woman, carry my weight in chest and hips. Ordered XXL because I like my hoodies roomy. It was a just a little roomier than I would have liked, but it shrunk a little bit when I laundered it, so now it's perfect. The sleeves are a little long, but not cumbersome. The bottom band hugs my hips not too loose, not too tight. It's very soft, lightweight, and warm. I would have given five stars, but I noticed it has a hole in the seam at the cuff and now I have to return it, which is adds a little chore to my to-do list.",
-        date: 04 - 8 - 2017,
+        date: 04 - 08 - 2017,
         rating: 3
       }
     ],
@@ -101,7 +101,7 @@ const sampleData = [
     product_reviews: [
       {
         body: "Got this for my boyfriend as a silly anniversary gift. He absolutely loves it! He usually wears a medium, but I got a large to be safe and to be honest it's not a bad fit, it's just a little on the larger side. I recommend ordering this in the size that you regularly wear!",
-        date: 02 - 1 - 2019,
+        date: 02 - 01 - 2019,
         rating: 4
       }
     ],
@@ -179,6 +179,186 @@ const sampleData = [
     ],
     product_quantity: 150,
     promotion: True,
+    in_cart: False
+  },
+  {
+    product_id: 11,
+    product_name: 'HENLEY SHIRT',
+    product_image: '../client/dist/productIMG/11.jpeg',
+    product_price: 14.99,
+    product_description:
+      'gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat',
+    product_reviews: [
+      {
+        body: 'I believe that wearing this t-shirt has made me a better man, which is remarkable because, well....Im a chick.',
+        date: 06 - 06 - 2019,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 12,
+    product_name: 'SWEATSHORTS',
+    product_image: '../client/dist/productIMG/12.jpeg',
+    product_price: 9.99,
+    product_description:
+      'erat. Vivamus nisi. Mauris nulla. Integer urna.',
+    product_reviews: [
+      {
+        body: "Wow three pockets! I’ve always needed some shorts like this when attempting as minimalist a workout as possible until each pocket fell apart. First the right front 2 months ago, now the left. I’ve been using the back pocket now cause god I just love working out while sitting on my phone (/sarcasm). Don’t buy these shorts unless you don’t plan to use the pockets.",
+        date: 12 - 01 - 2015,
+        rating: 4
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 13,
+    product_name: 'OPEN-SHOULDER-TOP',
+    product_image: '../client/dist/productIMG/13.jpeg',
+    product_price: 15.99,
+    product_description:
+      'orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean',
+    product_reviews: [
+      {
+        body: "Fabric is not the quality I expect from under armor. It got a pull the very first day I wore it (into the office, nothing physical) and is now super noticeable and turning into a hole. Not worth the money. Find a different fabric.",
+        date: 02 - 06 - 2013,
+        rating: 2
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 14,
+    product_name: 'STRAW-HAT-WITH-EARS',
+    product_image: '../client/dist/productIMG/14.jpeg',
+    product_price: 24.99,
+    product_description:
+      'erat. Vivamus nisi. Mauris nulla. Integer urna',
+    product_reviews: [
+      {
+        body: "I don't know if it's possible to get a straw hat that comes without broken or missing pieces of straw. This is a very fragile hat. I have a hard time believing it would survive a day at the beach. Right out of the box, the edges of the brim are jagged and there are missing or broken straw pieces. Maybe perfection for a straw hat is too high an expectation?",
+        date: 07 - 06 - 2014,
+        rating: 3
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 15,
+    product_name: 'SEAMLESS SPORTS LEGGINGS',
+    product_image: '../client/dist/productIMG/15.jpeg',
+    product_price: 24.99,
+    product_description:
+      'lectus quis massa. Mauris vestibulum, neque sed',
+    product_reviews: [
+      {
+        body: "I think I'm in love with these pants! I've wore them twice now. I'm only 5'5 but have a good amount of muscle so I struggle with pants fitting right. They're either too high in the waist, there's too much fabric in the legs, or I can't fit them over my thighs. These pants fit like a T and I will be getting more.",
+        date: 10 - 06 - 2017,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 16,
+    product_name: 'LOOSE FLORAL TOP',
+    product_image: '../client/dist/productIMG/16.jpeg',
+    product_price: 24.99,
+    product_description:
+      'elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut mi. Duis',
+    product_reviews: [
+      {
+        body: "My husband loves this top but after only one washing it came apart on the left side at the seam . I have purchased these before with no problems and disappointed with this one. I'm in the process of sewing the seam but for the price of these shirts I shouldn't have to be fixing it.",
+        date: 03 - 12 - 2020,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 17,
+    product_name: 'FLORAL SKIRT',
+    product_image: '../client/dist/productIMG/17.jpeg',
+    product_price: 19.99,
+    product_description:
+      'vitae aliquam eros turpis non enim. Mauris',
+    product_reviews: [
+      {
+        body: "I bought one and it feels GREAT!!!! I was surprised because I'm a big girl and the price was so low I'm buying 3 now.",
+        date: 09 - 18 - 2015,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 18,
+    product_name: 'PLAID-PATTERENED SKIRT',
+    product_image: '../client/dist/productIMG/18.jpeg',
+    product_price: 24.99,
+    product_description:
+      'pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum.',
+    product_reviews: [
+      {
+        body: "Excellent material and perfect color for velma! I defiently recommend this skirt.",
+        date: 12 - 14 - 2016,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 19,
+    product_name: 'WOMENS BLACK BLAZER',
+    product_image: '../client/dist/productIMG/19.jpeg',
+    product_price: 44.99,
+    product_description:
+      'Ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus. Proin nisl sem, consequat nec,',
+    product_reviews: [
+      {
+        body: "WOWZA! This jacket is stunning and the quality is top of the line! I will need to order bigger size, but it could just be my 36DD's that are the problem... If you are smaller chested, it probably runs more true to size.",
+        date: 02 - 18 - 2019,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
+    in_cart: False
+  },
+  {
+    product_id: 20,
+    product_name: 'WOMENS LONG BLAZER COAT',
+    product_image: '../client/dist/productIMG/20.jpeg',
+    product_price: 54.99,
+    product_description:
+      'Aliquam vulputate ullamcorper magna. Sed eu eros. Nam',
+    product_reviews: [
+      {
+        body: "This blazer came very before date estimated, it fit true to size. Very comfortable. Was given many compliments on how nice it was",
+        date: 11 - 30 - 2016,
+        rating: 5
+      }
+    ],
+    product_quantity: 150,
+    promotion: False,
     in_cart: False
   }
 ];
