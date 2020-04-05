@@ -7,7 +7,7 @@ const sampleData = [
   {
     product_id: 1,
     product_name: 'MEN U DRIZZLER JACKET',
-    product_image: 'https://lh3.googleusercontent.com/UhAWh25mpQ4n0Y_MQKeEP18I-FI9r1bIGfnFHab3NU0VZgqE_QiKPw5UV5K5CfNGZhDFhDwmsujQuie6sjePsXf-QSXQt6qhTEWGKjXil0TAT-EucMYK7OGw10bq_NTe2WQ_gqYFjzif2yvp4yrqmILUY3VCz2TYEguNbKIyJqsDPentSApg1Xj6QgeUPF02O3YAs_-AHtRreZmABx2ZNj-Yvh2dZoj1xPkxdzRPl4fDhkvDt7k8SQHEcB3G1C03aN0lCdVGLqFkQF4UGEkc-XLwcOk3g1sHcKYgd8gnreAOr5Kz_Dw0WaUs5akjPrdhbaLL-wwFd2bRGoQXL2d_mB8lU3Ai8JNIHTQ3jhm1E6aRXyG3jXLZhS4K47yIVlYEI1T8mbjqzj_Kv81FFYJsNkzjckXpXljHsUMF79-0C10_vyY06aaDcrun-Tp2Fx6Oog56iSgzSgo3VepiPzqHohXWsF74B1tAs_X8Klne9ukjDycIYxdOf2slbsEKIOMqwg5607tJf4Zj4OFedriQDXL7goz3syv-ufu5CZphCV_4LLw92oKN_jZ7xv_ogR4Wi9DCbcCdcexbj-npMjU6ubpepIztIbn_A6r8MOxoPz7PTEzJt0wu1VXyq5uDvmWYPGufIXaF1IdTF2ox1UPy8KuuOjH8T100SajvKf7wiWCBGYgGsd3SbmZUCap7rw=w564-h846-no',
+    product_image: 'https://lp2.hm.com/hmgoepprod?set=quality[79],source[/31/90/3190c3f910f8b9053c3ff0199d5b1fcf9cf02867.jpg],origin[dam],category[men_tshirtstanks_shortsleeve],type[LOOKBOOK],res[w],hmver[1]&call=url[file:/product/main]',
     product_price: 49.99,
     product_description:
       'et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus.Nullam scelerisque neque sed sem egestas blandit. Nam',
