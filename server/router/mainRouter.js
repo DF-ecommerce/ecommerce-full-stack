@@ -1,7 +1,7 @@
 let router = require('express').Router();
 let ecommerce = require('../../database/schema.js');
 
-router.route('/home').get((req, res) => {
+router.route('/data').get((req, res) => {
   return ecommerce
     .find({})
     .then((data) => {
