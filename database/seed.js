@@ -7,7 +7,7 @@ const sampleData = [
   {
     product_id: 1,
     product_name: 'MEN U DRIZZLER JACKET',
-    product_image: 'https://lh3.googleusercontent.com/UhAWh25mpQ4n0Y_MQKeEP18I-FI9r1bIGfnFHab3NU0VZgqE_QiKPw5UV5K5CfNGZhDFhDwmsujQuie6sjePsXf-QSXQt6qhTEWGKjXil0TAT-EucMYK7OGw10bq_NTe2WQ_gqYFjzif2yvp4yrqmILUY3VCz2TYEguNbKIyJqsDPentSApg1Xj6QgeUPF02O3YAs_-AHtRreZmABx2ZNj-Yvh2dZoj1xPkxdzRPl4fDhkvDt7k8SQHEcB3G1C03aN0lCdVGLqFkQF4UGEkc-XLwcOk3g1sHcKYgd8gnreAOr5Kz_Dw0WaUs5akjPrdhbaLL-wwFd2bRGoQXL2d_mB8lU3Ai8JNIHTQ3jhm1E6aRXyG3jXLZhS4K47yIVlYEI1T8mbjqzj_Kv81FFYJsNkzjckXpXljHsUMF79-0C10_vyY06aaDcrun-Tp2Fx6Oog56iSgzSgo3VepiPzqHohXWsF74B1tAs_X8Klne9ukjDycIYxdOf2slbsEKIOMqwg5607tJf4Zj4OFedriQDXL7goz3syv-ufu5CZphCV_4LLw92oKN_jZ7xv_ogR4Wi9DCbcCdcexbj-npMjU6ubpepIztIbn_A6r8MOxoPz7PTEzJt0wu1VXyq5uDvmWYPGufIXaF1IdTF2ox1UPy8KuuOjH8T100SajvKf7wiWCBGYgGsd3SbmZUCap7rw=w564-h846-no',
+    product_image: 'https://lp2.hm.com/hmgoepprod?set=quality[79],source[/e7/90/e7909b467cf022a8817f8eb2fedccdb496f0150e.jpg],origin[dam],category[men_hoodiessweatshirts_hoodies],type[LOOKBOOK],res[m],hmver[1]&call=url[file:/product/main]',
     product_price: 49.99,
     product_description:
       'et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus.Nullam scelerisque neque sed sem egestas blandit. Nam',
@@ -61,7 +61,7 @@ const sampleData = [
   {
     product_id: 4,
     product_name: 'MEN PIZZA STYLISH HOODIE',
-    product_image: 'https://lh3.googleusercontent.com/MnAgX4CaBG3Yaukq3tFCQiOKIa3rITwwBP_LaP_m5QgJ9pgAso8L6Oj3lj5q8W56KE5wbHpMoDdZyCSfEHJym46dW7gXNulfdsvT8fIUc_w2bVT6pWcjfYcFV_slGJyH5o_rBocgKwlPJ_3qLa8DuZvS9TnMAEf_Ol-VoAlKmTvz98pkJUDPytcSJq3GFErpA3fFCw4mq8UcoE6NgwtZZ_MEMiMcCWmfU54dN3zY2DLJSkiXq_8LavgMbKe56He9tkMrJAy29Cer9UsswWE96ig1knwvmNUQRLXCsxB5C52K-ok-lwa-IjZ94iMM4tOnIZmNdxnpSwu-uFYzwPD7_2-ZoImdWQTGDbVLqcBhoOdtTjUIjF4GeioOI8aa-5PvAFHdcVixSKXsLeYSj2ey2ZJQxi97kcJcxlVOMMt1V_-WgxRDMcetcTviNhWzAEZKDB2KXGTaDQ98yJojfg0T0vlloRW-ffi4Lw9RY4-fajTP-RMDzg-g6FzPNZE7PkjDzHQs0ecoN5aJQujtQIXHDpqdyywHPrHM7L2w_Hcda4nKeuwM-KklK9d1Yve93dQ0ydcGfsZjx-MIrs6t-DqzykhO1QXGyhP62K5hZzNcU-a-RXfmEr-SzIvoOl_mcnhgfaiXlhs3Gcnr9_MBkOjJaDuknoD9p2AlGrnwY1QLru0fGIC1sfFjZ-ckIpuB5A=w396-h594-no',
+    product_image: 'https://lp2.hm.com/hmgoepprod?set=quality[79],source[/69/66/696653a093978269a6be8a2f0f45efc201baeff9.jpg],origin[dam],category[men_tshirtstanks_shortsleeve],type[DESCRIPTIVESTILLLIFE],res[w],hmver[1]&call=url[file:/product/main]',
     product_price: 39.99,
     product_description:
       'dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris rhoncus id, mollis nec, cursus a',
