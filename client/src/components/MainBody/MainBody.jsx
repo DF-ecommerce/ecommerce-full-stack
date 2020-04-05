@@ -28,13 +28,10 @@ class MainBody extends React.Component{
 
 
   render(){
-    console.log(this.state)
+    console.log('mainbody', this.state)
     return(
-      <div>
-        {this.state.data.map((item, index) => (
-          <Listings key={index} listingData={item}/>
-        ))}
-        
+      <div id="mainBodyDiv">
+          <Listings listingData={this.state.data}/>
       </div>
     )
   }
