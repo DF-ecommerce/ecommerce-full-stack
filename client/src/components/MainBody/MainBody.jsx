@@ -1,6 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
-import Listings from './Listings.jsx'
+import Listings from './Listings/Listings.jsx'
 
 class MainBody extends React.Component{
   constructor(props){

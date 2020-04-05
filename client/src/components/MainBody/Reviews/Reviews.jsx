@@ -6,8 +6,7 @@ const Reviews = (props) => {
     <div>
       <h4>Reviews</h4>
       {props.reviews.map((review) => {
-        console.log('review', review);
-        return <Review review={review} />;
+        return <Review key={review._id} review={review} />;
       })}
     </div>
   );
