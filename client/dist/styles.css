@@ -2,3 +2,7 @@ body {
   background: rgb(226, 143, 143);
   color: white;
 }
+
+.ListingDiv {
+  border: 2px solid black;
+}

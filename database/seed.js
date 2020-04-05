@@ -1,10 +1,13 @@
 //connect to db
+const mongoose = require('mongoose')
+const Ecommerce = require('./schema')
+
 
 const sampleData = [
   {
     product_id: 1,
     product_name: 'MEN U DRIZZLER JACKET',
-    product_image: '../client/dist/productIMG/1.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/UhAWh25mpQ4n0Y_MQKeEP18I-FI9r1bIGfnFHab3NU0VZgqE_QiKPw5UV5K5CfNGZhDFhDwmsujQuie6sjePsXf-QSXQt6qhTEWGKjXil0TAT-EucMYK7OGw10bq_NTe2WQ_gqYFjzif2yvp4yrqmILUY3VCz2TYEguNbKIyJqsDPentSApg1Xj6QgeUPF02O3YAs_-AHtRreZmABx2ZNj-Yvh2dZoj1xPkxdzRPl4fDhkvDt7k8SQHEcB3G1C03aN0lCdVGLqFkQF4UGEkc-XLwcOk3g1sHcKYgd8gnreAOr5Kz_Dw0WaUs5akjPrdhbaLL-wwFd2bRGoQXL2d_mB8lU3Ai8JNIHTQ3jhm1E6aRXyG3jXLZhS4K47yIVlYEI1T8mbjqzj_Kv81FFYJsNkzjckXpXljHsUMF79-0C10_vyY06aaDcrun-Tp2Fx6Oog56iSgzSgo3VepiPzqHohXWsF74B1tAs_X8Klne9ukjDycIYxdOf2slbsEKIOMqwg5607tJf4Zj4OFedriQDXL7goz3syv-ufu5CZphCV_4LLw92oKN_jZ7xv_ogR4Wi9DCbcCdcexbj-npMjU6ubpepIztIbn_A6r8MOxoPz7PTEzJt0wu1VXyq5uDvmWYPGufIXaF1IdTF2ox1UPy8KuuOjH8T100SajvKf7wiWCBGYgGsd3SbmZUCap7rw=w564-h846-no',
     product_price: 49.99,
     product_description:
       'et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus.Nullam scelerisque neque sed sem egestas blandit. Nam',
@@ -16,13 +19,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: True,
-    in_cart: False
+    promotion: true,
+    in_cart: false
   },
   {
     product_id: 2,
     product_name: 'MEN GREEN T-SHIRT',
-    product_image: '../client/dist/productIMG/2.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/Jn5I8eEXlxTMqg1ahJZslUSb3gHwYOVwDmamscByoHM82QHdQeutde25-SLktREDgi3W5iURljPHwEor3hcfaDs5wyDwVe9eP4sUUjzBkxiv3xse5CdGmRSs7eaiVjBhhqFHiaPyOGoyz2ua0pfhmOWm_Yg3dixseHXyKOCqYfAvPxJF_CNnENOVGZ_LO_1fi4SBZk1SmuGaME9Eqf6qEvTqS33POVGk1Run3xvbPLjDjpYx6Nh9daPwkhuY3UnlZQIWaCrVWxtDdgbmXFRr6xR8r-xDMStibCi7YCSwWn4CQhtMu-x71lceS79bwbc3h4Krvg16kQj1uHNiNzYy7bHxS-sUsbw6_N5Jzn99cmqtEUGALajB3tKPq8xVOb2FJ43LLID23CUmPCYFQF_sS2qtKfoDDy1zuPY6MuxXFtPtETUI7x_A2SDExF18n1VtqMl_MaHCclaWxZxOX6q9iWLnEit6URPtO_diI8CFwKWrdmhY5XRdeC9VcyZu2XS9GMC8NnMakRdzpsEOGarsfAtnSAvpvvfwJGLsJMEWEGH9kIMPuvlS5rOGlGMi_ayN9pBocvWs_G3saYjieHYmzuXTOWB8f4FNF1FrmmEv30WNROGg1TvCDeEB-DkyHYDzfHGs23mGwy4JuWh1Vzw7U1b97t5u-Va70VAR3GKbtTw0d5fLXEL3UmGK2L-5Gw=w652-h978-no',
     product_price: 24.99,
     product_description:
       'Aliquam vulputate ullamcorper magna. Sed eu eros. Nam',
@@ -34,13 +37,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 3,
     product_name: 'MEN BLUE SPORTS JACKET',
-    product_image: '../client/dist/productIMG/3.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/mBnnvrDcgGxpqM8AOmCebQtSNQK6iNy3z-PmrbH6oQlnlYky9CZGbim9BbYBGAidM-Y2lilL-X2BLydZx6KKMZ0dh_g8nl_D0kXU9ivDFQJReYBuKIgChnLzSJe_LdT7sk_2D78ZEh8OHGTUWKKX9J73-HDmlOBi1b48PRV2pUlXtW6KltLt7LoUty-ktGiZp9H0rghbJp-zDG4hTs2X8rmu5h0UFUnY0-FpTDhrba26IgvrQhHa4EFMad5F8gUJgb2zFS6vSs3KUc15BlZ2Y4MXKPets_VbozlICsYdk3RDS3y32-cpamic1Glj3IOyy41gI681mx_28aT9M25clTosygDrlcZFiVW0-jXuT7jXaZC9z9utiU9NXRb7ksDI5Sknel5IeMqDLxs3cf04ACuIfsLI-wWQuo6hRrvH2iJQQVNW2sHhvKILm0BQ5HDGMuWv-dkpeNwY3c7E_4hT68uvdCHnnImWD15Thb7AgZbdbs_2yD6AKgpQraUdf4wnvZ7j174cQ071oRRVmUS-XrD87fpGC-lz6TLoN_2OX8VO_ob7Furbw6DA9ZtR5mWVwKAiYqMVkdN3US9j-wK963Z2BlnrzkxxXieUBWh6X35f_Qp_FGqLT2AfRvfpZVrGzyGFJT4zmEJKIvE5d6oa25AfEJddGwpbdhlr9EMaIIBsGxN-81HofY39USpLpQ=w652-h978-no',
     product_price: 89.75,
     product_description:
       'Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan',
@@ -52,13 +55,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: True,
-    in_cart: False
+    promotion: true,
+    in_cart: false
   },
   {
     product_id: 4,
     product_name: 'MEN PIZZA STYLISH HOODIE',
-    product_image: '../client/dist/productIMG/4.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/MnAgX4CaBG3Yaukq3tFCQiOKIa3rITwwBP_LaP_m5QgJ9pgAso8L6Oj3lj5q8W56KE5wbHpMoDdZyCSfEHJym46dW7gXNulfdsvT8fIUc_w2bVT6pWcjfYcFV_slGJyH5o_rBocgKwlPJ_3qLa8DuZvS9TnMAEf_Ol-VoAlKmTvz98pkJUDPytcSJq3GFErpA3fFCw4mq8UcoE6NgwtZZ_MEMiMcCWmfU54dN3zY2DLJSkiXq_8LavgMbKe56He9tkMrJAy29Cer9UsswWE96ig1knwvmNUQRLXCsxB5C52K-ok-lwa-IjZ94iMM4tOnIZmNdxnpSwu-uFYzwPD7_2-ZoImdWQTGDbVLqcBhoOdtTjUIjF4GeioOI8aa-5PvAFHdcVixSKXsLeYSj2ey2ZJQxi97kcJcxlVOMMt1V_-WgxRDMcetcTviNhWzAEZKDB2KXGTaDQ98yJojfg0T0vlloRW-ffi4Lw9RY4-fajTP-RMDzg-g6FzPNZE7PkjDzHQs0ecoN5aJQujtQIXHDpqdyywHPrHM7L2w_Hcda4nKeuwM-KklK9d1Yve93dQ0ydcGfsZjx-MIrs6t-DqzykhO1QXGyhP62K5hZzNcU-a-RXfmEr-SzIvoOl_mcnhgfaiXlhs3Gcnr9_MBkOjJaDuknoD9p2AlGrnwY1QLru0fGIC1sfFjZ-ckIpuB5A=w396-h594-no',
     product_price: 39.99,
     product_description:
       'dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris rhoncus id, mollis nec, cursus a',
@@ -70,13 +73,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 5,
     product_name: 'MEN AWESOME HOODIE BEIGE',
-    product_image: '../client/dist/productIMG/5.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/GeJdtw3VphckdPZ4DfY5cFYWKC-puHHDY-GaCQCd-FtgrvIgcO9sXHgtAQt3Zq5BgHvBt1dcNaiw6VoFFReBDfu1L1i6yWaVWJzDOp97AoTX0rudrd0Wtlgo6svuJh2zNuebJHsZVpXCCtwH-mOwe7Ypv3DtKlBnQ6V2xKW6ediplS-lRs4_-wwlNtotHYxLjyUH_4j3gMtkRv1AfdJVD2Qvws-uZBQh8FF_Egbpk06_7ao_7NjV40P9gtF8uzGKLkl_4HlWcS56pA-JtG5Xdq3pj63OsfIybrDIhiToOLfw29G-fBS0XM-yHhhfmFgQva7tKS_lI7dR0Xz9XZrZizhQ-TVIDUmRYdSVvaiExKrWQ_qReKF1acEggG_GV6UZOYmpexdMCnZiRLA9wg9mqGQi3WMurvrMzf_qqNEURuvdyg6eDBdZgprGOXcDG3wTJlQs7_QhlqiH6pi3L9l5N57olg9Gisgum3jDZyVNWqW1PwKy4qpQtjg1ZnMqfxIDWPhdBH958cR9bK4gRtYkQHjvvNP-NJSwHc_InC4Udo8MUVslk9m9hDRNsiwggz_y0BU98SQO6z3QMOrwm1pnCCQ-kfuO-f2dmLwOKyn9k-FW8tlKtce1Qtb6WZz5pR6Y9BNDcDRWien6Famfdi4lTd8_Z8h9AXxcrAOXkUDyAeGvcwFKaRUcE0_FfWuBcg=w652-h978-no',
     product_price: 76.89,
     product_description:
       'Lorem ipsum dolor sit dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris rhoncus id, mollis nec, cursus a',
@@ -88,13 +91,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 6,
     product_name: 'PINK SPONGEBOB HOODIE',
-    product_image: '../client/dist/productIMG/6.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/JE62gwbk6I5Jj1N-MqdtJEJFcP52uuOra1-gjQkfPA2BJFzflj3JKr1RZ27hrKiIKAqwiVdlDzoZIbrU9YIOd6QPUODX5VeRLip5woHLixihk3xU4U7CCZ2eS62CHHss4-8L66TKME9Vjelnfx4YPDRiTAzqC4GwwDH5Hxv6lOehLTVlpf9YLQFcijydRkezNfxqn5VI1y6fbItgUNwYSQOqaB81Q2a3rsrh5AbodBxkglcpcYkhPQi8_dwPc8dBpNIbI50a2-NgqPmGoN55BFQpM3-f9Vd07wdcCLME5AWUJsLZgmb8rGQeo_nAA277HBcTS-AdmBk82tCi1-9j-LJ2pywiR67RQsGQzWgRd_yN-dPeIgWUy8K2pjR5OhjNkmZtOx3CAG3523Uqn3Mbcf47KpLUN-LpRzJK-P-XyITz9JE-WcIdgaqVDBnwEbysBUfTHMNFeSEAkYUZvV6mJeph1o9mWvw3Iogo3Eb-lVBkUuvCCd6dnq0sHiQH2Wfmc9FHrrZnD-VJXpoZHcUg8mWm6jt-6Z-0O8ppS3NpNk1PFIsqDgYFaVoRNH2GlBJM9vzzSNSXCq1QVxAyjibNy9C8_0W3WysBREdBd2mKTeFYcJoP8Y1KgnozuIHoTjE0RQSTs7wcxHaw5yJsSc2feGe6Lxqk7zD3z_6NGv4QI36WUesn_a0CeKMpaL_8OQ=w396-h594-no',
     product_price: 34.99,
     product_description:
       'Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor',
@@ -106,13 +109,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 7,
     product_name: 'LONG SLEEVE PRINTED DESIGN',
-    product_image: '../client/dist/productIMG/7.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/at2nS8qWPqXQrQOIezA3jN2VKzZQytSGA8RDgIUl-RPuVt1VI67Fl5RTnbO4N4xV7TuBypYyUgSXvD8mzBXLkSvGkb01rI-4jV7NBZ99O78paAG2iJf_8gVqXylV0XJtT89zJQMPTJkchAfnaPSuEh4M-U3IQjIMa6v1hEB9g_BH9fciqwYD-ImOLnowvsQeRGLVAhHw-6rP06r9_IkqKdZDOxKECBa820NAtFNxtpE-3bZOpz1GvmbkJWvWscMC-s0XhCf8NpV-V8BIASzZgx8HkFYNAMiLAer_Q1jHNJ9f8xQoXOUy9nw8IuOGDrRJ8JcxEynDI0MoFutkRuDjTUkR45HTULmEXmUcFHhXp38TBDx8SBRgeUjeO_gxClszb_JTf-6NAucUzdcChsvBtBHvex5wAz9kxQLtbSrXa2MxQSV2lbD91DU8fpMv2szfSr-ErGqYKEvWxraKNLNx8GG1rLGa7PmQ_B5Dxt-gpzBFfQeLwxhY01L1Q43c-7EUOWZsDQmyWeznu_k1oFrfKuoIHt3kg3dqqSs7eOrkr9Z8X0PMe91iD1bWoQZNs6DJTLGLywYbulXC-sKSep79_lHphPbe7yF1gamIBpPCCTbgDu1YXQYI35dzVU3AiZrVPg6awRpa7S99c2nt2JtlaxAvzEajFs-lJIiOy3jkOTsywjgrM4xnm-PMBNoAyA=w652-h978-no',
     product_price: 27.99,
     product_description:
       'vel, mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus odio',
@@ -124,13 +127,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: True,
-    in_cart: False
+    promotion: true,
+    in_cart: false
   },
   {
     product_id: 8,
     product_name: 'SPONGEBOB LONG SLEEVE',
-    product_image: '../client/dist/productIMG/8.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/bWGOkUq7zuNXq9sK7V-fe0xR9qDCz3cKA-x7AOqi9PLQt_U1cio9XgP6xVIckDVaXzVk2Di0uU_1GsaZmn0bw3cKnZrH8AVpDc99cfOBBr9KIoclYA2HPGWbqEU0UzLe24IxvNYDil53_on0Ab4NPBejIDxKLw70UR5xkcC32Yn-qF4gDUz3jYhSksxx1ps-EoQ3m_Ei1Of9WetVYMIb9gl2xN626zopsy7Jed5vUUEoyM7AYXqbJjlaSMj5W9ihIgNhBBX4lyYqCc_ENfy8MbqsBXmjDRe90TISYgo51UkdmWJTnzfMnXSGyY3NN2z5CEALqW2RO4iLnPQhOjJ2uHvIXUXiXvuy1_dxOJWBHOYhNM69wbHqP7e7DOuH96OLhiGCuZuEuVkRmofq7mVUL_rDF8moPxUyTmMn_LYghtpix2_u_fh-s5WvkpHd19GVvfOs0wqRU1UXlHopTZCfiiHhgDIoIIteZ3WpvyjKdD3J-rdpP0Y-GXIlTzfXfXGkwUVDSzmnKV3m9JnrtIJ4xyKFQ50k1RHfe3o0dCuKzD4RTm8CVONJ_jlHV5v3m2CkBAjoZ0PuJCaP-4DrFA6nHCg1xofYHZ0PxJo5kCCRCcqBTFDvkWYA4bPeUvON4kcw5YOJW77NH5YRaqB8hG-6kDR2gT7NhhN4A4qR1FAHsi79AJZu67NGYlNyojNGyQ=w652-h978-no',
     product_price: 17.99,
     product_description:
       'Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor',
@@ -142,13 +145,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 9,
     product_name: 'ZIP-UP GREY SWEATER',
-    product_image: '../client/dist/productIMG/9.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/mUz09lNBDteBGWNEs_3gEsO-voJt08fIc54K_mA5zzHvcDVohfJK3W5G_KUJRX1-JmPpVdT60sxQTkcx5A54gvy380aSkO0qoVcZbxlxcDmgy8eTtU7gR9ZQK4c_px91bvKS3KICc2dcSiCEsvXTHtuXONtKWThUnHsABuYXY2JWv-taks44R3rzjzGuuR1Mc2e4xMOJRfCZn6kFkaI0x2PmknVsiBHYip8e5my-P8piXmOqV-wQyUfeX8QOcrBqKGLNT1hs4BGH0nEQOqW47auN6Gitg2x5bBVfzqwcSFA_ymkmtx_JsGazPr8ReFHjrMbfrdx-LgBZym0rNJ_govS2acwcphvhOYNQxze79YRA8M61A1BY6h5Hvisl5lo5K9s68x4xCwgPeCAbdC-pV4SSyNFF_BiPh3EI-RCfjJRUmBaSwHRr5eFykrdWoV13dp2e1jR_SKzGf8XpYrYH8n4gr59-2D-hvSDeI_18PfmOnPHymL1ytRsIB_mcypA3Dq4Vfw6tusHURCy6nYZvF0jBRUp25o4bvL059BreTcYXPNRnls6HkBgvi0LXelYcCHSqc7W0MyykwIAwZpH6F1lE5JSBoeM3CIJ6dcUscvJz0uNjpf3d2ugw3OrCyWBgNPaVYBd8U0R_wDwRf9cPzprYf-gQ_Rhqluc0hTvJ4zp-ml2NyE5IJdpuJvjD4A=w652-h978-no',
     product_price: 99.99,
     product_description:
       'vel, mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus odio',
@@ -160,13 +163,13 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 10,
     product_name: 'T-SHIRT WITH PRINTED DESIGN',
-    product_image: '../client/dist/productIMG/10.jpeg',
+    product_image: 'https://lh3.googleusercontent.com/dxsnBgSENavVw6L5bNtaf8pp8GKVN8LK_Y2brOylNwDRkN3hOoCAPVmerIiUFSMGNUolytSbweaBivA5EbpIj3fQDI92Iv6b3vbZRwNXDazOF5sQDqcMKOwQxTGuOQs3OZuaRLDrQV3bgAbcu8wxvbX-2ZEQ8SM7qkWtDdH1fdKVJxc2FFfV92r7YbBd5dNWecpBlPbqb4g5H5I08e9B_8U9MvscUrJOyDuTwenjxMZnqJjXbX6_zWRXTQDGcpWgqI5CQMv6MqUI6VVQDjyL2ysjAsK5TdIN_IDhcQadvsC0JLAk_M5HiF6fZ3gALFypiBit9kQwfwfwTZjw00oS7cyO4zYlWaRyAQK3spEuUb_jL5AsjcDiSl9ZGfpCOiZFlp8wmvKmoqYETkgvqIAOwgSgLa-V-HOKPDKBhLJNAFDYwnrDV4SZgshg8NVMq0C6R0y4RcMAXs2u8UNbA2m4C_GSYkXnX3KEwE8U4JaPXvLWwTqEzDuUwLi9gxC2wYJ-Nt_9lTt2bAZZqxiLy_pMl4oSzr5U6MDbdvL2lDIf2LRWM8Qz4OkfbsJu8xerJt5Ed6UJXoTjJYMjneKgHYLA_3TbS5IK7_Tw3TMfTMiK-iJuQpKSnfIITGMN-_O0-I3IZdclsAFMJLLIAzq6HkGVaBPn1ycN7p-hTnJmhOAXGpvNOzXex393tVywb451NA=w396-h594-no',
     product_price: 22.99,
     product_description:
       'sem elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero vel, mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus odio,',
@@ -178,9 +181,10 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: True,
-    in_cart: False
-  },
+    promotion: true,
+    in_cart: false
+  }
+  ,
   {
     product_id: 11,
     product_name: 'HENLEY SHIRT',
@@ -362,3 +366,15 @@ const sampleData = [
     in_cart: false
   }
 ];
+
+const seedSampleData = function() {
+  Ecommerce.insertMany(sampleData)
+    .then(()=>{
+      console.log("seeded")
+      mongoose.connection.close()
+    })
+    .catch(err => console.log(err));
+};
+
+seedSampleData()
+
