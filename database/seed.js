@@ -196,8 +196,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 12,
@@ -214,8 +214,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 13,
@@ -232,8 +232,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 14,
@@ -250,8 +250,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 15,
@@ -268,8 +268,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 16,
@@ -286,8 +286,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 17,
@@ -304,8 +304,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 18,
@@ -322,8 +322,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 19,
@@ -340,8 +340,8 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   },
   {
     product_id: 20,
@@ -358,7 +358,7 @@ const sampleData = [
       }
     ],
     product_quantity: 150,
-    promotion: False,
-    in_cart: False
+    promotion: false,
+    in_cart: false
   }
 ];
