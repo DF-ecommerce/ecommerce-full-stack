@@ -1,15 +1,21 @@
 import React from 'react';
+import Listing from './Listing.jsx';
 
-const Listings = (props) => {
-  return (
-    <div>
-      <h3>{props.listingData.product_name}</h3>
-      <img src={props.listingData.product_image} height="400" width="350" />
-      <h4> Product Description:</h4>
-      <p>{props.listingData.product_description}</p>
-      <h4>Price: ${props.listingData.product_price}</h4>
-    </div>
-  );
-};
+class Listings extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div id="ListingsDiv">
+        {this.props.listingData.map((item) => (
+          <Listing key={item._id} data={item} />
+        ))}
+      </div>
+    );
+  }
+}
 
 export default Listings;
