@@ -1,8 +1,45 @@
 body {
-  background: rgb(226, 143, 143);
-  color: rgb(255, 255, 255);
+  background: rgb(246, 246, 246);
+  color: rgb(66, 66, 66);
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  position: absolute;
 }
 
 .ListingDiv {
-  border: 2px solid black;
+  border: 1px solid rgb(182, 182, 182);
+}
+
+#topNavDiv {
+  background: black;
+  color: white;
+  height: 10vh;
+  text-decoration: none;
+}
+
+#logo {
+  display: block;
+  font-family: "Dancing Script", Arial;
+  font-size: 4vw;
+  padding-top: 1%;
+}
+
+#topNavDiv, ul{
+  margin-top: 0;
+  overflow: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+#accountNav {
+  font-family: "Open Sans";
+  text-align: center;
+  margin-top: -6%;
+  float: right;
+  font-weight: 300;
+  font-size: 2.25vw;
+  padding: 2%;
 }
