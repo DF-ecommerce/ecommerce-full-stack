@@ -22,7 +22,7 @@ body {
   display: block;
   font-family: "Dancing Script", Arial;
   font-size: 4vw;
-  padding-top: 1%;
+  padding-top: 0.5%;
 }
 
 #topNavDiv, ul{
@@ -32,14 +32,26 @@ body {
 
 li {
   list-style-type: none;
+  text-decoration: none;
 }
 
 #accountNav {
   font-family: "Open Sans";
   text-align: center;
-  margin-top: -6%;
+  margin-top: -6.5%;
   float: right;
   font-weight: 300;
   font-size: 2.25vw;
   padding: 2%;
+}
+
+#footerDiv {
+  position: absolute;
+  background: black;
+  color: white;
+  height: 12vh;
+  text-decoration: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
