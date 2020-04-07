@@ -7,6 +7,24 @@ body {
   position: absolute;
 }
 
+#mainBodyContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  /* padding-bottom: 60px; */
+  overflow: hidden;
+}
+
+#mainBodyDiv{
+  top: 200px;
+  bottom:0; 
+  width: 100%; 
+  height: 100%;
+  position: fixed; 
+  overflow-y: scroll;
+}
+
 #navBar {
   border: 1px solid grey;
 }
@@ -15,10 +33,14 @@ body {
   border: 1px solid rgb(182, 182, 182);
 }
 
+
 #topNavDiv {
+  position: fixed;
+  width: 100%;
   background: black;
   color: white;
   height: 10vh;
+  padding-bottom: 10px;
   text-decoration: none;
 }
 
@@ -29,14 +51,34 @@ body {
   padding-top: 0.5%;
 }
 
-#topNavDiv, ul{
+#mainNav, ul{
   margin-top: 0;
   overflow: hidden;
 }
 
+#subNav {
+  display: table;
+  text-align: center;
+  width: 100%;
+  color: black;
+  border-bottom: 2px solid rgb(187, 187, 187);
+  background-color: rgb(246, 246, 246);
+}
+
+ul#horizontal-list li{
+  display: inline;
+  padding: 10px 30px;
+}
+
+
 li {
   list-style-type: none;
   text-decoration: none;
+}
+
+#search{
+  margin:0 0 0 18px;
+  text-align: center; 
 }
 
 #accountNav {
@@ -50,12 +92,13 @@ li {
 }
 
 #footerDiv {
-  position: absolute;
+  position: fixed;
   background: black;
   color: white;
-  height: 12vh;
+  height: 5vh;
   text-decoration: none;
   bottom: 0;
   left: 0;
   width: 100%;
+  overflow: hidden;
 }
