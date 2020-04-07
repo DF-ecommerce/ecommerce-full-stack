@@ -15,14 +15,17 @@ class NavBar extends React.Component {
     });
   }
 
-  searchButtonHandler(e) {}
+  searchButtonHandler(e) {
+    e.preventDefault()
+    console.log("clicked")
+  }
 
   render() {
     console.log(this.state.search);
     return (
       <div id="topNavDiv">
-        <div id="search">
-          <form>
+        <div id="searchBar">
+          <form >
             <input
               onChange={this.searchInputHandler}
               type="text"
