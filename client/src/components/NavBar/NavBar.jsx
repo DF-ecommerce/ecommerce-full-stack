@@ -69,7 +69,22 @@ class NavBar extends React.Component {
               <a href="#">Women</a>
             </li>
             <li>
+              <a href="#">Kids & Baby</a>
+            </li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
               <a href="#">Shoes</a>
+            </li>
+            <li>
+              <a href="#">Furniture</a>
+            </li>
+            <li>
+              <a href="#">Bed</a>
+            </li>
+            <li>
+              <a href="#">Bath</a>
             </li>
             <li>
               <a href="#">Accessories</a>
