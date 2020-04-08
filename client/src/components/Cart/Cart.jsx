@@ -4,8 +4,12 @@ class Cart extends React.Component {
   constructor(props){
     super(props)
     this.state= {
-
+      inCart: []
     }
+  }
+
+  addToCartHandler(item){
+    this.state.inCart.push(item)
   }
 
   render(){

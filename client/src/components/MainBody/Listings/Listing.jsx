@@ -11,6 +11,7 @@ const Listing = (props) => {
       <h4>Product Description</h4>
       <p>{props.data.product_description}</p>
       <h4>Price: ${props.data.product_price}</h4>
+      <button>Add To Cart</button>
       <button
         onClick={() => {
           setShowReviews(!showReviews);
