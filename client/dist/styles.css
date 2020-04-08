@@ -7,15 +7,17 @@ body {
   position: absolute;
 }
 
+/* MAIN BODY CONTAINER */
 #mainBodyContainer{
   position: relative;
   width: 100%;
-  /* height: 100%; */
-  min-height: 400px;
+  height: 100%;
+  /* min-height: 400px; */
   /* padding-bottom: 60px; */
   overflow: hidden;
 }
 
+/* LISTINGS COMPONENT */
 #mainBodyDiv{
   position: fixed; 
   top: 200px;
@@ -25,72 +27,112 @@ body {
   overflow-y: scroll;
 }
 
-#navBar {
-  border: 1px solid grey;
-}
-
+/* MAIN-BODY COMPONENT LISTINGS*/
 .ListingDiv {
   border: 1px solid rgb(182, 182, 182);
 }
 
-
+/* NAV-BAR CONTAINER */
 #topNavDiv {
   /* position: fixed; */
   width: 100%;
   background: black;
   color: white;
-  height: 10vh;
-  padding-bottom: 10px;
+  /* height: 8vh; */
   text-decoration: none;
 }
 
+/* NAV-BAR: LOGO */
 #logo {
   display: block;
   font-family: "Dancing Script", Arial;
-  font-size: 4vw;
+  font-size: 3vw;
   padding-top: 0.5%;
+  width: 150px;
+  max-width: 100%;
+  margin-right: 0;
+  cursor: pointer;  
 }
 
+
+#cartIcon {
+  cursor: pointer;
+}
+
+/* MAIN NAV-BAR */
 #mainNav, ul{
   margin-top: 0;
   overflow: hidden;
 }
 
+/* SUB-NAV: SHOP BY, MEN, WOMEN... */
 #subNav {
   display: table;
   text-align: center;
   width: 100%;
-  color: black;
+  height: 2vh;
+  padding-top: 10px;
   border-bottom: 2px solid rgb(187, 187, 187);
   background-color: rgb(246, 246, 246);
 }
-
+/* SUB-NAV: SHOP BY, MEN, WOMEN... */
 ul#horizontal-list li{
   display: inline;
   padding: 10px 30px;
 }
-
+/* SUB-NAV: SHOP BY, MEN, WOMEN... */
+ul#horizontal-list a{
+  color: black;
+  text-decoration: none;
+}
 
 li {
   list-style-type: none;
   text-decoration: none;
 }
 
+/* SEARCH-BAR */
 #searchBar{
   margin:0 0 0 18px;
   text-align: center; 
 }
 
-#accountNav {
+
+/* NAV-BAR: CART, ACCOUNT, SIGN-OUT */
+.accountNav {
   font-family: "Open Sans";
   text-align: center;
   margin-top: -6.5%;
   float: right;
   font-weight: 300;
-  font-size: 2.25vw;
+  font-size: 2vw;
   padding: 2%;
 }
 
+/* CART TITLE */
+#cartTitle {
+  text-align: center;
+}
+
+/* CART HEADING CONTAINER */
+.cartHeadingContainer {
+  margin-top: 8vh;
+}
+
+/* CART HEADING <UL> */
+.cartHeadings{
+  display: flex;
+  justify-content: space-around;
+}
+
+.cartHeadings li {
+  text-align: center;
+  padding-bottom: 15px;
+  width: 125px;
+  border-bottom: 2px solid rgb(155, 153, 153);  
+}
+
+/* FOOTER */
 #footerDiv {
   position: fixed;
   background: black;

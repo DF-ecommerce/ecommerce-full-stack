@@ -16,64 +16,64 @@ class NavBar extends React.Component {
   }
 
   searchButtonHandler(e) {
-    e.preventDefault()
-    console.log("clicked")
+    e.preventDefault();
+    console.log('clicked');
   }
 
   render() {
     console.log(this.state.search);
     return (
       <div id="topNavDiv">
-        <div id="searchBar">
-          <form >
-            <input
-              onChange={this.searchInputHandler}
-              type="text"
-              name="search"
-              value={this.state.search}
-              placeholder="Search Products"
-            ></input>
-            <button>Search</button>
-          </form>
-        </div>
-
         <div id="mainNav">
+          <div id="searchBar">
+            <form>
+              <input
+                onChange={this.searchInputHandler}
+                type="text"
+                name="search"
+                value={this.state.search}
+                placeholder="Search Products"
+              ></input>
+              <button>Search</button>
+            </form>
+          </div>
           <ul>
-            <li>
+            <li onClick={() => this.props.onClickHandler('mainBody')}>
               <a id="logo">D&F</a>
             </li>
             <li>
-              <a id="accountNav">Sign-out </a>
+              <a className="accountNav">Sign-out </a>
             </li>
             <li>
-              <a id="accountNav">Account </a>
+              <a className="accountNav">Account </a>
             </li>
-            <li>
-              <a id="accountNav">Cart</a>
+            <li id='cartIcon' onClick={() => this.props.onClickHandler('cart')}>
+              <a className="accountNav">Cart</a>
             </li>
           </ul>
+
+          
         </div>
 
         <div id="subNav">
           <ul id="horizontal-list">
             <li>
-              <a>Shop by Department:</a>
+              <a href="#">Shop by Department:</a>
             </li>
             <li>
-              <a>Men</a>
+              <a href="#">Men</a>
             </li>
             <li>
-              <a>Women</a>
+              <a href="#">Women</a>
             </li>
             <li>
-              <a>Shoes</a>
+              <a href="#">Shoes</a>
             </li>
             <li>
-              <a>Accessories</a>
+              <a href="#">Accessories</a>
             </li>
           </ul>
         </div>
-
       </div>
     );
   }
