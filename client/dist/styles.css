@@ -19,12 +19,12 @@ body {
 
 /* LISTINGS COMPONENT */
 #mainBodyDiv{
-  position: fixed; 
+  /* position: fixed;  */ /* commented out to fix fixated position of navbar*/
   top: 200px;
   bottom:0; 
   width: 100%; 
   height: 100%;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 /* MAIN-BODY COMPONENT LISTINGS*/
@@ -46,7 +46,7 @@ body {
 #logo {
   display: block;
   font-family: "Dancing Script", Arial;
-  font-size: 3vw;
+  font-size: 5vw;
   padding-top: 0.5%;
   width: 150px;
   max-width: 100%;
@@ -134,13 +134,26 @@ li {
 
 /* FOOTER */
 #footerDiv {
-  position: fixed;
+  /* position: fixed; */
+  display:block;
   background: black;
   color: white;
-  height: 5vh;
+  height: 14vh;
   text-decoration: none;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   width: 100%;
   overflow: hidden;
+}
+
+#footerLogo {
+  display: block;
+  font-family: "Dancing Script", Arial;
+  font-size: 5vw;
+  padding-top: 2%;
+  margin-left: -2%;
+  width: 100%;
+  max-width: 100%;
+  margin-right: 0;
+  cursor: pointer;  
 }
