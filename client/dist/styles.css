@@ -93,10 +93,15 @@ li {
 
 /* SEARCH-BAR */
 #searchBar{
-  margin:0 0 0 18px;
-  text-align: center; 
+  position: absolute;
+  top: 0.3%;
+  margin-left: 25%;
 }
 
+#searchInput {
+  width: "150px";
+  line-height: "30px"
+}
 
 /* NAV-BAR: CART, ACCOUNT, SIGN-OUT */
 .accountNav {
@@ -157,3 +162,4 @@ li {
   margin-right: 0;
   cursor: pointer;  
 }
+

@@ -26,13 +26,15 @@ class NavBar extends React.Component {
       <div id="topNavDiv">
         <div id="mainNav">
           <div id="searchBar">
-            <form>
-              <input
+            <form >
+              <input 
+                size="75" // couldn't get input sizing to work so in-line css for temp. solution
                 onChange={this.searchInputHandler}
                 type="text"
                 name="search"
                 value={this.state.search}
                 placeholder="Search Products"
+                
               ></input>
               <button>Search</button>
             </form>
