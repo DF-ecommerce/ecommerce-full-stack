@@ -29,7 +29,7 @@ body {
 
 /* MAIN-BODY COMPONENT LISTINGS*/
 .ListingDiv {
-  border: 1px solid rgb(182, 182, 182);
+  border-bottom: 0.5px solid rgb(182, 182, 182);
 }
 
 /* NAV-BAR CONTAINER */
