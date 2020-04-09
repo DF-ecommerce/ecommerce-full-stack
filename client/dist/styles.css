@@ -96,8 +96,9 @@ li {
 /* SEARCH-BAR */
 #searchBar{
   position: absolute;
-  top: 0.3%;
+  /* top: 0.3%; */
   margin-left: 25%;
+  margin-top: 3%;
 }
 
 

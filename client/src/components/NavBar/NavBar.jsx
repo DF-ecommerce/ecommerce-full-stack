@@ -1,4 +1,7 @@
 import React from 'react';
+// import {Input} from 'antd'
+// import 'antd/dist/antd.css';
+// const {Search} = Input;
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -15,9 +18,9 @@ class NavBar extends React.Component {
     });
   }
 
-  searchButtonHandler(e) {
-    e.preventDefault();
-    console.log('clicked');
+  searchButtonHandler() {
+    
+    console.log("clicked")
   }
 
   render() {
@@ -26,7 +29,7 @@ class NavBar extends React.Component {
       <div id="topNavDiv">
         <div id="mainNav">
           <div id="searchBar">
-            <form >
+            <form onSubmit={this.searchButtonHandler}>
               <input 
                 size="75" // couldn't get input sizing to work so in-line css for temp. solution
                 onChange={this.searchInputHandler}
@@ -36,12 +39,14 @@ class NavBar extends React.Component {
                 placeholder="Search Products"
                 
               ></input>
-              <button>Search</button>
+              <input type="submit" value="Search"/>
             </form>
+            {/* <Search placeholder="Search Products" onSearch={this.searchButtonHandler} enterButton /> */}
+          
           </div>
           <ul>
-            <li onClick={() => this.props.onClickHandler('mainBody')}>
-              <a id="logo">D&F</a>
+            <li >
+              <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
             </li>
             <li>
               <a className="accountNav">Sign-out </a>
@@ -49,8 +54,8 @@ class NavBar extends React.Component {
             <li>
               <a className="accountNav">Account </a>
             </li>
-            <li id='cartIcon' onClick={() => this.props.onClickHandler('cart')}>
-              <a className="accountNav">Cart</a>
+            <li id='cartIcon' >
+              <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
             </li>
           </ul>
 
