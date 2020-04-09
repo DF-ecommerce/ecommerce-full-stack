@@ -26,7 +26,6 @@ class MainBody extends React.Component {
   }
 
   render() {
-    console.log('mainbody', this.state);
     return (
       <div id="mainBodyContainer">
         <div id="mainBodyDiv">

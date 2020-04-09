@@ -14,7 +14,7 @@ class Cart extends React.Component {
 
   render(){
     return(
-      <div>
+      <div id="cartContainer">
       <h1 id='cartTitle'>Your Shopping Cart</h1>
         <div className='cartHeadingContainer'>
           <ul className='cartHeadings'>
@@ -24,7 +24,7 @@ class Cart extends React.Component {
             <li>Quantity</li>
           </ul>
         </div>
-        <div>
+        <div id="cartList">
           <p>cart list component will go here</p>
         </div>
         
