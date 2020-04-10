@@ -26,10 +26,10 @@ class MainBody extends React.Component {
   }
 
   //Add to cart function
-  addToCartHandler(listing) {
-    Axios.put(`/update/${listing}/cart`),
+  // addToCartHandler(listing) {
+  //   Axios.put(`/update/${listing}/cart`),
       
-  }
+  // }
 
   render() {
     return (

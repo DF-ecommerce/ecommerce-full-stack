@@ -177,7 +177,7 @@ li {
 }
 
 #footerTextContainer {
-  padding: 0.5% 2% 0 16%;
+  padding: 0 2% 0 16%;
   display: inline-flex;
 }
 
@@ -186,3 +186,6 @@ li {
   font-family: "Open Sans", "Arial";
   font-size: 0.7em;
 }
+  #footerTextColumn li {
+    margin-bottom: 7%
+  }
