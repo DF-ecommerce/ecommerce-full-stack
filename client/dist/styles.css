@@ -148,15 +148,13 @@ li {
 
 /* FOOTER */
 
-.footerContainer {
+.footerMainContainer {
   display: inline-block;
-  margin-bottom: 0px;
-  height: 14vh;
+  height: 16vh;
   width: 100%;
   background-color: black;
   color: white;
   text-decoration: none;
-  bottom: 0px;
   list-style: none;
   padding-left: 20px;
 }
@@ -166,7 +164,7 @@ li {
   position: absolute;
   font-family: "Dancing Script", Arial;
   font-size: 6vw;
-  margin: 2% 0 0 0 ;
+  margin: 1% 0 0 0 ;
   left: 5%;
   width: auto;
   max-width: 100%; 
@@ -178,37 +176,13 @@ li {
   color: white;
 }
 
-#footerUlWrapper {
-  padding: 2.8% 0 0 16%;
-  /* display: inline-block; */
+#footerTextContainer {
+  padding: 0.5% 2% 0 16%;
+  display: inline-flex;
 }
 
-div#footerTextContainerOne li {
-  margin-left: 5%;
-  margin-bottom: 0.5%;
+#footerTextColumn {
+  margin-top: 5%;
   font-family: "Open Sans", "Arial";
   font-size: 0.7em;
 }
-
-div#footerTextContainerTwo li {
-  z-index: 5;
-  display: block;
-  position: relative;
-  left: 40%;
-  margin-bottom: 0.5%;
-  font-family: "Open Sans", "Arial";
-  font-size: 0.7em;
-  color: red;
-}
-
-/* .footerLineOne {
-  display: block;
-}
-
-.footerLineTwo {
-  display: block;
-}
-
-.footerLineThree {
-  display: block;
-} */

@@ -2,24 +2,35 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="footerContainer">
+    <div className="footerMainContainer">
       <span id="footerLogo" href="#"> D&F </span>
 
-      <div id="footerTextContainerOne">
-        <ul id="footerUlWrapper">
+      <div id="footerTextContainer">
+        <ul id="footerTextColumn">
           <li>Home</li>
           <li>About</li>
           <li>Account</li>
         </ul>
-      </div>
 
-      <div id="footerTextContainerTwo">
-      <ul>
+      <ul id="footerTextColumn">
         <li>Customer Support</li>
         <li>Refund Policy</li>
         <li>Sales Tax</li>
       </ul>
-    </div>
+
+      <ul id="footerTextColumn">
+        <li>Help Center</li>
+        <li>Privacy Settings</li>
+        <li>Gift Cards</li>
+      </ul>
+
+      <ul id="footerTextColumn">
+        <li>Project Commenced on</li>
+        <li>March 25, 2020</li>
+        <li>By Danny San & Frankie Liu</li>
+      </ul>
+      </div>
+
     </div>
   );
 };
