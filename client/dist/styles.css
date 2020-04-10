@@ -1,10 +1,9 @@
 body {
   background: rgb(246, 246, 246);
   color: rgb(66, 66, 66);
-  margin-top: 0;
-  margin-left: 0;
+  margin: 0 0 0 0;
   width: 100%;
-  position: absolute;
+  /* position: absolute; */
 }
 
 /* MAIN BODY CONTAINER */
@@ -148,28 +147,68 @@ li {
 }
 
 /* FOOTER */
-#footerDiv {
-  /* position: fixed; */
-  display:block;
-  background: black;
-  color: white;
+
+.footerContainer {
+  display: inline-block;
+  margin-bottom: 0px;
   height: 14vh;
+  width: 100%;
+  background-color: black;
+  color: white;
   text-decoration: none;
   bottom: 0px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
+  list-style: none;
+  padding-left: 20px;
 }
+
 
 #footerLogo {
-  display: block;
+  position: absolute;
   font-family: "Dancing Script", Arial;
-  font-size: 5vw;
-  padding-top: 2%;
-  margin-left: -2%;
-  width: 100%;
-  max-width: 100%;
-  margin-right: 0;
-  cursor: pointer;  
+  font-size: 6vw;
+  margin: 2% 0 0 0 ;
+  left: 5%;
+  width: auto;
+  max-width: 100%; 
+  text-decoration: none;
+  z-index: 2;
 }
 
+#footerLogo:visited {
+  color: white;
+}
+
+#footerUlWrapper {
+  padding: 2.8% 0 0 16%;
+  /* display: inline-block; */
+}
+
+div#footerTextContainerOne li {
+  margin-left: 5%;
+  margin-bottom: 0.5%;
+  font-family: "Open Sans", "Arial";
+  font-size: 0.7em;
+}
+
+div#footerTextContainerTwo li {
+  z-index: 5;
+  display: block;
+  position: relative;
+  left: 40%;
+  margin-bottom: 0.5%;
+  font-family: "Open Sans", "Arial";
+  font-size: 0.7em;
+  color: red;
+}
+
+/* .footerLineOne {
+  display: block;
+}
+
+.footerLineTwo {
+  display: block;
+}
+
+.footerLineThree {
+  display: block;
+} */
