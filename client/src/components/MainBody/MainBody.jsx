@@ -8,6 +8,7 @@ class MainBody extends React.Component {
     this.state = {
       data: []
     };
+    this.addToCartHandler = this.addToCartHandler.bind(this)
   }
   componentDidMount() {
     this.getData();
@@ -26,16 +27,22 @@ class MainBody extends React.Component {
   }
 
   //Add to cart function
-  // addToCartHandler(listing) {
-  //   Axios.put(`/update/${listing}/cart`),
-      
-  // }
+  addToCartHandler(listing) {
+    Axios.put(`/cart/${listing}/updatecart`,
+    {in_cart: true})
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
 
   render() {
     return (
       <div id="mainBodyContainer">
         <div id="mainBodyDiv">
-          <Listings listingData={this.state.data} />
+          <Listings listingData={this.state.data} addToCart={this.addToCartHandler}/>
         </div>
       </div>
     );

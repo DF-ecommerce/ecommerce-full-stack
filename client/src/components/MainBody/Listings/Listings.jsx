@@ -5,7 +5,7 @@ const Listings = (props) => {
   return (
     <div id="ListingsDiv">
       {props.listingData.map((item) => (
-        <Listing key={item._id} data={item} />
+        <Listing key={item._id} data={item} addToCart={props.addToCart}/>
       ))}
     </div>
   );

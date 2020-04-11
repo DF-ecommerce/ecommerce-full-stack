@@ -3,7 +3,6 @@ import Reviews from '../Reviews/Reviews.jsx';
 
 const Listing = (props) => {
   const [showReviews, setShowReviews] = useState(false);
-
   return (
     <div className="ListingDiv">
       <h3>{props.data.product_name}</h3>
@@ -11,7 +10,7 @@ const Listing = (props) => {
       <h4>Product Description</h4>
       <p>{props.data.product_description}</p>
       <h4>Price: ${props.data.product_price}</h4>
-      <button>Add To Cart</button>
+      <button onClick={()=> props.addToCart(props.data._id)}>Add To Cart</button>
       <button
         onClick={() => {
           setShowReviews(!showReviews);

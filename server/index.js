@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/main', mainRouter);
-app.use('/update', updateCartRouter)
+app.use('/cart', updateCartRouter)
 
 
 

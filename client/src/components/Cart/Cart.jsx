@@ -1,4 +1,6 @@
 import React from 'react';
+import Axios from 'axios'
+import CartListings from './CartListings.jsx'
 
 class Cart extends React.Component {
   constructor(props){
@@ -7,12 +9,21 @@ class Cart extends React.Component {
       inCart: []
     }
   }
+  componentDidMount(){
+    this.addToCartHandler()
+  }
 
-  addToCartHandler(item){
-    this.state.inCart.push(item)
+  addToCartHandler(){
+    Axios.get('/cart/incart')
+    .then(cart => {
+      this.setState({
+        inCart: cart.data
+      })
+    })
   }
 
   render(){
+    console.log('insidecart', this.state)
     return(
       <div id="cartContainer">
       <h1 id='cartTitle'>Your Shopping Cart</h1>
@@ -25,7 +36,7 @@ class Cart extends React.Component {
           </ul>
         </div>
         <div id="cartList">
-          <p>cart list component will go here</p>
+          <CartListings inCart={this.state.inCart}/>
         </div>
         
       </div>
