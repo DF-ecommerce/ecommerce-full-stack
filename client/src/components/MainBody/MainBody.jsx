@@ -28,7 +28,7 @@ class MainBody extends React.Component {
 
   //Add to cart function
   addToCartHandler(listing) {
-    Axios.put(`/cart/${listing}/updatecart`,
+    Axios.put(`/cart/${listing}/addtocart`,
     {in_cart: true})
     .then(res => {
       console.log(res)

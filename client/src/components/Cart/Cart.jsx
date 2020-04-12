@@ -1,34 +1,47 @@
 import React from 'react';
-import Axios from 'axios'
-import CartListings from './CartListings.jsx'
+import Axios from 'axios';
+import CartListings from './CartListings.jsx';
 
 class Cart extends React.Component {
-  constructor(props){
-    super(props)
-    this.state= {
-      inCart: []
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      inCart: [],
+    };
+    this.removeItemHandler = this.removeItemHandler.bind(this)
   }
-  componentDidMount(){
-    this.addToCartHandler()
+  componentDidMount() {
+    this.addToCartHandler();
   }
 
-  addToCartHandler(){
-    Axios.get('/cart/incart')
-    .then(cart => {
+  addToCartHandler() {
+    Axios.get('/cart/incart').then((cart) => {
       this.setState({
         inCart: cart.data
-      })
+      });
+    });
+  }
+
+  removeItemHandler(item){
+    console.log('removeItem item', item)
+    Axios.put(`/cart/${item}/removefromcart`,
+    {in_cart: false})
+    .then(res => {
+      this.componentDidMount()
+      console.log(res)
+    })
+    .catch(err => {
+      console.log(err)
     })
   }
 
-  render(){
-    console.log('insidecart', this.state)
-    return(
+  render() {
+    console.log(this.state)
+    return (
       <div id="cartContainer">
-      <h1 id='cartTitle'>Your Shopping Cart</h1>
-        <div className='cartHeadingContainer'>
-          <ul className='cartHeadings'>
+        <h1 id="cartTitle">Your Shopping Cart</h1>
+        <div className="cartHeadingContainer">
+          <ul className="cartHeadings">
             <li>Product</li>
             <li>Description</li>
             <li>Price</li>
@@ -36,12 +49,18 @@ class Cart extends React.Component {
           </ul>
         </div>
         <div id="cartList">
-          <CartListings inCart={this.state.inCart}/>
+          <CartListings
+            inCart={this.state.inCart}
+            incrementCounter={this.incrementCounterHandler}
+            decrementCounter={this.decrementCounterHandler}
+            counterChange={this.counterChangeHandler}
+            counter={this.state.quantity}
+            removeItem={this.removeItemHandler}
+          />
         </div>
-        
       </div>
-    )
+    );
   }
 }
 
-export default Cart
+export default Cart;

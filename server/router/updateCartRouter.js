@@ -11,11 +11,22 @@ router.route('/inCart').get((req, res) => {
   })
 });
 
-router.route('/:id/updatecart').put((req, res) => {
+router.route('/:id/addtocart').put((req, res) => {
   let { id } = req.params;
-  console.log('id', id);
   return ecommerce
     .findByIdAndUpdate({ _id: id }, { in_cart: true })
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    });
+});
+
+router.route('/:id/removefromcart').put((req, res) => {
+  let { id } = req.params;
+  return ecommerce
+    .findByIdAndUpdate({ _id: id }, { in_cart: false })
     .then((data) => {
       res.status(200).send(data);
     })

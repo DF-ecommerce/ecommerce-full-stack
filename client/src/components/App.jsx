@@ -40,6 +40,7 @@ class App extends React.Component {
     return (
       <div>
         <NavBar onClickHandler={this.onClickHandler}/>
+        {/* display body or cart */}
         {this.renderBodyHandler()}
         <Footer />
       </div>
