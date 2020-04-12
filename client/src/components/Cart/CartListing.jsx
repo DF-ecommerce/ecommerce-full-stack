@@ -43,35 +43,35 @@ class CartListing extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div id="cartListingContainer">
+        <div id="cartListingImage">
           <img src={this.props.inCart.product_image} height="250" width="180" />
         </div>
-        <div>
+        <div id="cartListingDescription">
           <p>{this.props.inCart.product_description}</p>
         </div>
-        <div>
+        <div id="cartListingPrice">
           <h4>${this.props.inCart.product_price}</h4>
         </div>
-        <div>
-          <div>
+        <div id="cartQuantityContainer">
+          <div id="cartListingQuantity">
             <button
               onClick={() => {
-                this.incrementCounterHandler();
+                this.decrementCounterHandler()
               }}
             >
-              +
+              -
             </button>
-            <input
+            <input id="cartListingQtyBox"
               value={this.state.quantity}
               onChange={this.counterChangeHandler}
             ></input>
             <button
               onClick={() => {
-                this.decrementCounterHandler();
+                this.incrementCounterHandler()
               }}
             >
-              -
+              +
             </button>
           </div>
           <div>

@@ -40,6 +40,7 @@ class Cart extends React.Component {
     return (
       <div id="cartContainer">
         <h1 id="cartTitle">Your Shopping Cart</h1>
+        
         <div className="cartHeadingContainer">
           <ul className="cartHeadings">
             <li>Product</li>
@@ -48,7 +49,7 @@ class Cart extends React.Component {
             <li>Quantity</li>
           </ul>
         </div>
-        <div id="cartList">
+        <div id="cartComponentContainer">
           <CartListings
             inCart={this.state.inCart}
             incrementCounter={this.incrementCounterHandler}
