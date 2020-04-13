@@ -8,7 +8,6 @@ body {
   color: rgb(66, 66, 66);
   margin: 0;
   width: 100%;
- 
 }
 
 
@@ -42,19 +41,26 @@ body {
   overflow: hidden;
 }
 
+/* SEARCH-BAR */
+#searchBar{
+  position: absolute;
+  /* top: 0.3%; */
+  margin-left: 25%;
+  margin-top: 3%;
+}
+
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
 #subNav {
-  display: table;
   text-align: center;
   width: 100%;
   padding-top: 0.75vh;
   padding-bottom: 0px;
-  border-bottom: 1px solid rgb(195, 195, 195);
+  border-bottom: 1px solid rgb(230, 230, 230);
   background-color: rgb(246, 246, 246);
 }
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
 #horizontal-list {
-  margin-top:10%;
+  margin: 0.25% 0 0.55% 0;
 }
 
 ul#horizontal-list li{
@@ -74,15 +80,6 @@ li {
   text-decoration: none;
 }
 
-/* SEARCH-BAR */
-#searchBar{
-  position: absolute;
-  /* top: 0.3%; */
-  margin-left: 25%;
-  margin-top: 3%;
-}
-
-
 /* NAV-BAR: CART, ACCOUNT, SIGN-OUT */
 .accountNav {
   font-family: "Open Sans";
@@ -92,6 +89,14 @@ li {
   font-weight: 300;
   font-size: 2vw;
   padding: 2%;
+}
+
+#banner {
+  height: auto;
+  margin: -17% 5% 0 0;
+  width: 90%;
+  float: right;
+  margin-right: 5%;
 }
 
 /* MAIN BODY CONTAINER */
@@ -122,7 +127,7 @@ li {
 
 /* MAIN-BODY COMPONENT LISTINGS*/
 .ListingDiv {
-  border-top: 0.5px solid rgb(182, 182, 182);
+  border-top: 0.5px solid rgb(190, 190, 190);
   width: 30%;
   font-family: "Open Sans", "Arial";
   padding: 3% 1.33% 0 1.33%;
