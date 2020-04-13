@@ -1,16 +1,22 @@
+
+html, body {
+  overflow-x: hidden; 
+}
+
 body {
   background: rgb(246, 246, 246);
   color: rgb(66, 66, 66);
-  margin: 0 0 0 0;
+  margin: 0;
   width: 100%;
+ 
 }
+
 
 /* NAV-BAR CONTAINER */
 #topNavContainer {
   width: 100%;
   background: black;
   color: white;
-  text-decoration: none;
 }
 
 /* NAV-BAR: LOGO */
