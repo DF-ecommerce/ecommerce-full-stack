@@ -41,13 +41,24 @@ body {
   width: 40%;
   border: 0.5px solid rgb(218, 61, 61);
   font-family: "Open Sans", "Arial";
-  margin-top: 5%;
   background-color: rgb(150, 241, 170);
 }
+
 
 #ListingImg {
   height: 50%;
   width: 50%;
+}
+
+#ListingName, #ListingPrice {
+  color: rgb(39, 39, 39);
+  font-size: 1em;
+  font-weight: bolder;
+  margin-bottom: -3%;
+}
+
+#ListingDescription, #ListingShipping {
+  font-size: 0.8em;
 }
 
 /* NAV-BAR CONTAINER */

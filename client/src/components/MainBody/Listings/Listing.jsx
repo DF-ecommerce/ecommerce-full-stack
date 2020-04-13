@@ -4,11 +4,12 @@ import Reviews from '../Reviews/Reviews.jsx';
 const Listing = (props) => {
   const [showReviews, setShowReviews] = useState(false);
   return (
-    <div className="ListingDiv">
+    <div className={`ListingDiv`}>
       <img id="ListingImg" src={props.data.product_image}/>
-      <h3><strong>{props.data.product_name}</strong></h3>
-      <p>{props.data.product_description}</p>
-      <h4><strong>Price: ${props.data.product_price}</strong></h4>
+      <p id="ListingName">{props.data.product_name}</p>
+      <p id="ListingDescription">{props.data.product_description}</p>
+      <p id="ListingPrice">Price: ${props.data.product_price}</p>
+      <p id="ListingShipping">Free shipping on orders $25+</p>
       <button onClick={()=> props.addToCart(props.data._id)}>Add To Cart</button>
       <button
         onClick={() => {

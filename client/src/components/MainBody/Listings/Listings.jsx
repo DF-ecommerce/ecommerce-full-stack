@@ -4,8 +4,8 @@ import Listing from './Listing.jsx';
 const Listings = (props) => {
   return (
     <div id="ListingsDiv">
-      {props.listingData.map((item) => (
-        <Listing key={item._id} data={item} addToCart={props.addToCart}/>
+      {props.listingData.map((item, index) => (
+        <Listing index={index} data={item} addToCart={props.addToCart}/>
       ))}
     </div>
   );
