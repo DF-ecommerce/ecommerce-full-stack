@@ -26,7 +26,7 @@ class NavBar extends React.Component {
   render() {
     console.log(this.state.search);
     return (
-      <div id="topNavDiv">
+      <div id="topNavContainer">
         <div id="mainNav">
           <div id="searchBar">
             <form onSubmit={this.searchButtonHandler}>

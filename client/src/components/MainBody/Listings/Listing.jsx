@@ -5,11 +5,10 @@ const Listing = (props) => {
   const [showReviews, setShowReviews] = useState(false);
   return (
     <div className="ListingDiv">
-      <h3>{props.data.product_name}</h3>
-      <img src={props.data.product_image} height="400" width="300"/>
-      <h4>Product Description</h4>
+      <img id="ListingImg" src={props.data.product_image}/>
+      <h3><strong>{props.data.product_name}</strong></h3>
       <p>{props.data.product_description}</p>
-      <h4>Price: ${props.data.product_price}</h4>
+      <h4><strong>Price: ${props.data.product_price}</strong></h4>
       <button onClick={()=> props.addToCart(props.data._id)}>Add To Cart</button>
       <button
         onClick={() => {

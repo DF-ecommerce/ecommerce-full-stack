@@ -29,7 +29,7 @@ class App extends React.Component {
   renderBodyHandler(){
     const {display} = this.state
     if(display === 'mainBody'){
-      return <div><MainBody /></div>
+      return <div id="mainBodyContainer"><MainBody /></div>
     }
     if(display === 'cart'){
       return <div><Cart /></div>

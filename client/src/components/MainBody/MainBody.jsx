@@ -40,11 +40,9 @@ class MainBody extends React.Component {
 
   render() {
     return (
-      <div id="mainBodyContainer">
-        <div id="mainBodyDiv">
+        <div id="mainBodyRender">
           <Listings listingData={this.state.data} addToCart={this.addToCartHandler}/>
         </div>
-      </div>
     );
   }
 }
