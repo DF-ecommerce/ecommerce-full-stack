@@ -74,8 +74,8 @@ class CartListing extends React.Component {
               +
             </button>
           </div>
-          <div>
-            <a href='#' onClick={()=> this.props.removeItem(this.props.inCart._id)}>remove item</a>
+          <div className="removeFromCartBContainer">
+            <button className="removeFromCartButton"onClick={()=> this.props.removeItem(this.props.inCart._id)}>remove item</button>
           </div>
         </div>
       </div>
