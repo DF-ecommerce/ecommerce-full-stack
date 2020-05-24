@@ -55,7 +55,7 @@ class CartListing extends React.Component {
         </div>
         <div id="cartQuantityContainer">
           <div id="cartListingQuantity">
-            <button
+            <button id="quantityChangeButton"
               onClick={() => {
                 this.decrementCounterHandler()
               }}
@@ -66,7 +66,7 @@ class CartListing extends React.Component {
               value={this.state.quantity}
               onChange={this.counterChangeHandler}
             ></input>
-            <button
+            <button id="quantityChangeButton"
               onClick={() => {
                 this.incrementCounterHandler()
               }}

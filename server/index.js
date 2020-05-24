@@ -17,5 +17,5 @@ app.use('/cart', updateCartRouter)
 
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`D&F listening at http://localhost:${port}`)
 );

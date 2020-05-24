@@ -36,12 +36,11 @@ class Cart extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div id="cartContainer">
         <h1 id="cartTitle">Your Shopping Cart</h1>
         
-        <div className="cartHeadingContainer">
+        <div id="cartComponentContainer">
           <ul className="cartHeadings">
             <li>Product</li>
             <li>Description</li>
@@ -49,8 +48,10 @@ class Cart extends React.Component {
             <li>Quantity</li>
           </ul>
         </div>
-        <div id="cartComponentContainer">
-          <CartListings
+        <div>
+
+          
+        <CartListings
             inCart={this.state.inCart}
             incrementCounter={this.incrementCounterHandler}
             decrementCounter={this.decrementCounterHandler}

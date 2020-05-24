@@ -264,6 +264,11 @@ li {
   /* border: 1px solid gray; */
   display: flex;
   flex-direction: row;
+  padding-top: 1%;
+}
+
+#cartListingContainer:hover {
+  border: 1px solid rgb(223, 223, 223);
 }
 
 #cartListingImage{
@@ -294,8 +299,22 @@ li {
   /* border: 1px solid orange; */
 }
 
+#quantityChangeButton {
+  border: none;
+  background: #dedede;
+  padding: 1% 11%;
+}
+
+#quantityChangeButton:hover {
+  cursor: pointer;
+  background: #c2c2c2;
+}
+
+
 #cartListingQtyBox{
+  text-align: center;
   width: 30px;
+  border: none;
 }
 
 .removeFromCartButton {
