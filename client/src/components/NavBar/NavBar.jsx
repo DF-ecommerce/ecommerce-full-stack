@@ -7,7 +7,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: ''
+      query: ''
     };
     this.searchInputHandler = this.searchInputHandler.bind(this);
   }
@@ -28,18 +28,16 @@ class NavBar extends React.Component {
     return (
       <div id="topNavContainer">
         <div id="mainNav">
-          <div id="searchBar">
+          <div id="searchBarContainer">
             <form onSubmit={this.searchButtonHandler}>
-              <input 
+              <input id="searchBarInput"
                 size="75" // couldn't get input sizing to work so in-line css for temp. solution
                 onChange={this.searchInputHandler}
                 type="text"
                 name="search"
-                value={this.state.search}
                 placeholder="Search Products"
-                
               ></input>
-              <input type="submit" value="Search"/>
+              <button id="searchButtonSubmit">Search</button>
             </form>
             {/* <Search placeholder="Search Products" onSearch={this.searchButtonHandler} enterButton /> */}
           
@@ -49,10 +47,10 @@ class NavBar extends React.Component {
               <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
             </li>
             <li>
-              <a className="accountNav">Sign-out </a>
+              <a className="accountNav">Sign-out</a>
             </li>
             <li>
-              <a className="accountNav">Account </a>
+              <a className="accountNav">Account</a>
             </li>
             <li id='cartIcon' >
               <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
