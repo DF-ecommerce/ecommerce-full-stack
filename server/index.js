@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3030;
+const PORT = process.env.PORT || 3030;
 const bodyParser = require('body-parser');
 const mainRouter = require('./router/mainRouter.js');
 const updateCartRouter = require('./router/updateCartRouter.js')
@@ -16,6 +16,6 @@ app.use('/cart', updateCartRouter)
 
 
 
-app.listen(port, () =>
-  console.log(`D&F listening at http://localhost:${port}`)
+app.listen(PORT, () =>
+  console.log(`D&F listening at http://localhost:${PORT}`)
 );
