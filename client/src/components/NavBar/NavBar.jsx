@@ -34,7 +34,7 @@ class NavBar extends React.Component {
                 size="75" // couldn't get input sizing to work so in-line css for temp. solution
                 onChange={this.searchInputHandler}
                 type="text"
-                name="search"
+                name="query"
                 placeholder="Search Products"
               ></input>
               <button id="searchButtonSubmit">Search</button>
@@ -63,34 +63,34 @@ class NavBar extends React.Component {
         <div id="subNav">
           <ul id="horizontal-list">
             <li>
-              <a href="#">Shop by Department:</a>
+              <a href="#" id="navCategoryItem">Shop by Department:</a>
             </li>
             <li>
-              <a href="#">Men</a>
+              <a href="#" id="navCategoryItem">Men</a>
             </li>
             <li>
-              <a href="#">Women</a>
+              <a href="#" id="navCategoryItem">Women</a>
             </li>
             <li>
-              <a href="#">Kids & Baby</a>
+              <a href="#" id="navCategoryItem">Kids & Baby</a>
             </li>
             <li>
-              <a href="#">Home</a>
+              <a href="#" id="navCategoryItem">Home</a>
             </li>
             <li>
-              <a href="#">Shoes</a>
+              <a href="#" id="navCategoryItem">Shoes</a>
             </li>
             <li>
-              <a href="#">Furniture</a>
+              <a href="#" id="navCategoryItem">Furniture</a>
             </li>
             <li>
-              <a href="#">Bed</a>
+              <a href="#" id="navCategoryItem">Bed</a>
             </li>
             <li>
-              <a href="#">Bath</a>
+              <a href="#" id="navCategoryItem">Bath</a>
             </li>
             <li>
-              <a href="#">Accessories</a>
+              <a href="#" id="navCategoryItem">Accessories</a>
             </li>
           </ul>
         </div>
