@@ -59,6 +59,10 @@ body {
 
 #searchButtonSubmit {
   cursor: pointer;
+  font-family: "Open Sans";
+  border: none;
+  margin-left: 10px;
+  border-radius: 3px;
 }
 
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
@@ -149,7 +153,9 @@ li {
 }
 
 #productButtonsContainer{
-  margin-left: -6%;
+  display: flex;
+  width: 80%;
+  margin: auto;
 }
 
 #ListingImg {
@@ -178,7 +184,7 @@ li {
 #productDescriptionContainer {
   min-height: 50%;
   width: 77%;
-  margin-left: auto;
+  margin: auto;
   text-align: left;
 }
 
@@ -193,19 +199,14 @@ li {
 }
 
 #addToCartButton, #showReviewsButton {
-  display: inline-block;
   border: none;
   padding: 0.4rem 0.65rem;
-  margin: 0 2% 2% 1%;
-  text-decoration: none;
+  margin: auto;
   background: #363636;
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 15px;
   cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out,
-              transform 150ms ease;
-  -webkit-appearance: none;
+  transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
 #addToCartButton:hover, #addToCartButton:focus,
