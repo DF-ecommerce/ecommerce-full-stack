@@ -3,6 +3,10 @@ html, body {
   overflow-x: hidden; 
 }
 
+#app {
+  overflow-y: hidden;
+}
+
 body {
   background: rgb(246, 246, 246);
   color: rgb(66, 66, 66);
@@ -50,7 +54,7 @@ body {
 }
 
 #searchBarInput {
-  size: 75;
+  width: 75%;
 }
 
 #searchButtonSubmit {
