@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
 
 html, body {
   overflow-x: hidden; 
@@ -12,7 +14,7 @@ body {
   color: rgb(66, 66, 66);
   margin: 0;
   width: 100%;
-  font-family: "Open Sans", "Arial";
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -59,7 +61,7 @@ body {
 
 #searchButtonSubmit {
   cursor: pointer;
-  font-family: "Open Sans";
+  font-family: 'Source Sans Pro', sans-serif;
   border: none;
   margin-left: 10px;
   border-radius: 3px;
@@ -68,7 +70,6 @@ body {
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
 #subNav {
   text-align: center;
-  width: 100%;
   padding-top: 0.75vh;
   padding-bottom: 0px;
   border-bottom: 1px solid rgb(212, 212, 212);
