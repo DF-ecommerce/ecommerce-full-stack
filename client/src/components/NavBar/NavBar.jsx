@@ -19,12 +19,9 @@ class NavBar extends React.Component {
   }
 
   searchButtonHandler() {
-    
-    console.log("clicked")
   }
 
   render() {
-    console.log(this.state.search);
     return (
       <div id="topNavContainer">
         <div id="mainNav">

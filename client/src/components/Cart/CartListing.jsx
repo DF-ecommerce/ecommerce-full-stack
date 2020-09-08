@@ -13,7 +13,6 @@ class CartListing extends React.Component {
   }
 
   incrementCounterHandler() {
-    console.log('clicked');
     this.setState((prevState) => {
       if (prevState.quantity < 10) {
         return {
@@ -24,8 +23,8 @@ class CartListing extends React.Component {
       }
     });
   }
+
   decrementCounterHandler() {
-    console.log('clicked');
     this.setState((prevState) => {
       if (prevState.quantity > 0) {
         return {
@@ -48,6 +47,7 @@ class CartListing extends React.Component {
           <img src={this.props.inCart.product_image} height="250" width="180" />
         </div>
         <div id="cartListingDescription">
+          <p id="cartListingName">{this.props.inCart.product_name}</p>
           <p>{this.props.inCart.product_description}</p>
         </div>
         <div id="cartListingPrice">
