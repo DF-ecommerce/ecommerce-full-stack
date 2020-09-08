@@ -41,7 +41,9 @@ class MainBody extends React.Component {
   render() {
     return (
         <div id="mainBodyRender">
+          <div className="bannerContainer">
            <img id="banner" src="./MainPageBanner.png"></img>
+           </div>
           <Listings listingData={this.state.data} addToCart={this.addToCartHandler}/>
         </div>
     );

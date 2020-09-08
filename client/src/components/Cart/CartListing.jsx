@@ -13,7 +13,6 @@ class CartListing extends React.Component {
   }
 
   incrementCounterHandler() {
-    console.log('clicked');
     this.setState((prevState) => {
       if (prevState.quantity < 10) {
         return {
@@ -24,8 +23,8 @@ class CartListing extends React.Component {
       }
     });
   }
+
   decrementCounterHandler() {
-    console.log('clicked');
     this.setState((prevState) => {
       if (prevState.quantity > 0) {
         return {
@@ -48,6 +47,7 @@ class CartListing extends React.Component {
           <img src={this.props.inCart.product_image} height="250" width="180" />
         </div>
         <div id="cartListingDescription">
+          <p id="cartListingName">{this.props.inCart.product_name}</p>
           <p>{this.props.inCart.product_description}</p>
         </div>
         <div id="cartListingPrice">
@@ -55,7 +55,7 @@ class CartListing extends React.Component {
         </div>
         <div id="cartQuantityContainer">
           <div id="cartListingQuantity">
-            <button
+            <button id="quantityChangeButton"
               onClick={() => {
                 this.decrementCounterHandler()
               }}
@@ -66,7 +66,7 @@ class CartListing extends React.Component {
               value={this.state.quantity}
               onChange={this.counterChangeHandler}
             ></input>
-            <button
+            <button id="quantityChangeButton"
               onClick={() => {
                 this.incrementCounterHandler()
               }}
@@ -74,8 +74,8 @@ class CartListing extends React.Component {
               +
             </button>
           </div>
-          <div>
-            <a href='#' onClick={()=> this.props.removeItem(this.props.inCart._id)}>remove item</a>
+          <div className="removeFromCartBContainer">
+            <button className="removeFromCartButton"onClick={()=> this.props.removeItem(this.props.inCart._id)}>remove item</button>
           </div>
         </div>
       </div>

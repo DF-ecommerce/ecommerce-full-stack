@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
 
 html, body {
   overflow-x: hidden; 
+}
+
+#app {
+  overflow-y: hidden;
 }
 
 body {
@@ -8,6 +14,7 @@ body {
   color: rgb(66, 66, 66);
   margin: 0;
   width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -30,6 +37,11 @@ body {
   cursor: pointer;  
 }
 
+.loadingCircle {
+    text-align: center;
+    margin-top: 10vh;
+    height: 60vh;
+}
 
 #cartIcon {
   cursor: pointer;
@@ -42,20 +54,30 @@ body {
 }
 
 /* SEARCH-BAR */
-#searchBar{
+#searchBarContainer{
   position: absolute;
-  /* top: 0.3%; */
   margin-left: 25%;
-  margin-top: 3%;
+  margin-top: 3%; 
+}
+
+#searchBarInput {
+  width: 75%;
+}
+
+#searchButtonSubmit {
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  margin-left: 10px;
+  border-radius: 3px;
 }
 
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
 #subNav {
   text-align: center;
-  width: 100%;
   padding-top: 0.75vh;
   padding-bottom: 0px;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(212, 212, 212);
   background-color: rgb(246, 246, 246);
 }
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
@@ -68,11 +90,15 @@ ul#horizontal-list li{
   padding: 10px 0 0 25px;
 }
 /* SUB-NAV: SHOP BY, MEN, WOMEN... */
-ul#horizontal-list a{
+#navCategoryItem {
   color: rgb(66, 66, 66);
-  font-family: "Open Sans", "Arial";
   font-size: 0.9em;
   text-decoration: none;
+}
+
+#navCategoryItem:hover {
+  color: rgb(32, 32, 32);
+  font-weight: 600;
 }
 
 li {
@@ -82,7 +108,6 @@ li {
 
 /* NAV-BAR: CART, ACCOUNT, SIGN-OUT */
 .accountNav {
-  font-family: "Open Sans";
   text-align: center;
   margin-top: -6.5%;
   float: right;
@@ -91,38 +116,36 @@ li {
   padding: 2%;
 }
 
+.bannerContainer {
+  text-align: center;
+}
+
+.cartBannerContainer {
+  border-bottom: 1px solid #8d8d8d;
+  text-align: center;
+}
+
 #banner {
-  height: auto;
-  margin: -17% 5% 0 0;
-  width: 90%;
-  float: right;
-  margin-right: 5%;
+  margin-top: 20px;
+  width: 650px;
+  padding-bottom: 20px;
 }
 
 /* MAIN BODY CONTAINER */
 #mainBodyContainer{
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  margin-top: 20%;
+  padding-bottom: 2%;
 }
 
 /* LISTINGS COMPONENT */
 #mainBodyRender{
-  top: 200px;
-  bottom:0; 
-  width: 100%; 
-  height: 100%;
 }
 
 #ListingsDiv {
-  /* border-bottom: 0.5px solid rgb(182, 182, 182); */
-  display: -webkit-flex;
-  float: right;
+  display: flex;
   width: 80%;
-  margin-right: 8%;
-  flex-wrap: wrap
+  margin-right: auto;
+  flex-wrap: wrap;
+  margin-left: auto;
 }
 
 /* MAIN-BODY COMPONENT LISTINGS*/
@@ -131,7 +154,6 @@ li {
   position: relative;
   border-top: 0.5px solid rgb(190, 190, 190);
   width: 30%;
-  font-family: "Open Sans", "Arial";
   padding: 3% 1.33% 0 1.33%;
   height: 80%;
 }
@@ -139,10 +161,13 @@ li {
 #mainProductContent{
   position: relative;
   height: 100%;
-  /* padding-bottom: 20%; */
+  text-align: center;
 }
+
 #productButtonsContainer{
-  /* padding-top: 5px; */
+  display: flex;
+  width: 80%;
+  margin: auto;
 }
 
 #ListingImg {
@@ -153,9 +178,9 @@ li {
 
 #ListingName, #ListingPrice {
   color: rgb(39, 39, 39);
-  font-size: 1em;
-  font-weight: bolder;
-  margin: 0 0 -3% 2%;
+    font-size: 1em;
+    font-weight: bolder;
+    margin-bottom: -3%;
 }
 
 #ListingPrice {
@@ -166,38 +191,34 @@ li {
   text-decoration: line-through;
   color: rgb(94, 94, 94);
   font-size: 0.7em;
-  margin-left: 2%;
 }
 
 #productDescriptionContainer {
-  height: 50%;
+  min-height: 50%;
+  width: 77%;
+  margin: auto;
+  text-align: left;
 }
 
 #ListingDescription{
-  height:17%;
+  font-size: 0.8em;
+  width: 55%;
 }
 
 #ListingDescription, #ListingShipping {
   font-size: 0.8em;
-  margin-left: 2%;
+  width: 55%;
 }
 
 #addToCartButton, #showReviewsButton {
-  display: inline-block;
   border: none;
   padding: 0.4rem 0.65rem;
-  margin: 0 2% 2% 1%;
-  text-decoration: none;
+  margin: auto;
   background: #363636;
   color: #ffffff;
-  font-family: "Open Sans", "Arial";
-  font-size: 0.75rem;
+  font-size: 15px;
   cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out,
-              transform 150ms ease;
-  -webkit-appearance: none;
-
+  transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
 #addToCartButton:hover, #addToCartButton:focus,
@@ -250,7 +271,7 @@ li {
   text-align: center;
   padding-bottom: 1%;
   width: 11%;
-  border-bottom: 2px solid rgb(155, 153, 153);  
+  border-bottom: 2px solid rgb(192 192 192);  
 }
 
 #cartContainer {
@@ -260,26 +281,27 @@ li {
   margin-right:auto;
   max-width: 960px;
   height: 100%;
-  /* border: 1px solid grey; */
 }
 
 #cartListingContainer {
-  /* position: absolute; */
-  /* border: 1px solid gray; */
   display: flex;
   flex-direction: row;
+  padding-top: 1%;
 }
 
 #cartListingImage{
-  /* border: 1px solid greenyellow; */
   margin-left: 8%;
 }
 
 #cartListingDescription {
-  margin-top: 60px;
-  /* border: 1px solid red; */
   width: 150px;
   margin-left: 7%;
+  display: block;
+}
+
+#cartListingName {
+  color: rgb(49, 49, 49);
+  font-weight: 600;
 }
 
 #cartListingPrice {
@@ -298,9 +320,47 @@ li {
   /* border: 1px solid orange; */
 }
 
-#cartListingQtyBox{
-  width: 30px;
+#quantityChangeButton {
+  border: none;
+  background: #dedede;
+  padding: 1% 11%;
 }
+
+#quantityChangeButton:hover {
+  cursor: pointer;
+  background: #c2c2c2;
+}
+
+
+#cartListingQtyBox{
+  text-align: center;
+  width: 30px;
+  border: none;
+}
+
+.removeFromCartButton {
+  display: inline-block;
+  border: none;
+  padding: 0.4rem 0.65rem;
+  margin: 0 2% 2% 1%;
+  text-decoration: none;
+  background: #1d1d1d;
+  color: #ffffff;
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+}
+
+.removeFromCartBContainer {
+  margin-top: 5%;
+}
+
+.removeFromCartButton:hover {
+  background: #363636;
+  color: #ffffff;
+}
+
 
 /* FOOTER */
 
@@ -339,9 +399,15 @@ li {
 
 #footerTextColumn {
   margin-top: 5%;
-  font-family: "Open Sans", "Arial";
   font-size: 0.7em;
 }
-  #footerTextColumn li {
-    margin-bottom: 7%
-  }
+
+#footerTextColumn li {
+  margin-bottom: 7%
+}
+
+#checkoutButtonContainer {
+  width: 100%;
+  text-align: right;
+  margin: 50px 0;
+}

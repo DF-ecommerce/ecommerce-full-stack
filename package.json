@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --w --mode development",
     "start": "nodemon",
-    "watch": "webpack-dev-server --open"
+    "watch": "webpack-dev-server --open",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
     "axios": "0.19.2",
     "body-parser": "1.19.0",
     "express": "4.17.1",
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "mongoose": "5.9.7",
     "nodemon": "2.0.2",
     "path": "^0.12.7",

@@ -7,7 +7,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: ''
+      query: ''
     };
     this.searchInputHandler = this.searchInputHandler.bind(this);
   }
@@ -19,27 +19,22 @@ class NavBar extends React.Component {
   }
 
   searchButtonHandler() {
-    
-    console.log("clicked")
   }
 
   render() {
-    console.log(this.state.search);
     return (
       <div id="topNavContainer">
         <div id="mainNav">
-          <div id="searchBar">
+          <div id="searchBarContainer">
             <form onSubmit={this.searchButtonHandler}>
-              <input 
+              <input id="searchBarInput"
                 size="75" // couldn't get input sizing to work so in-line css for temp. solution
                 onChange={this.searchInputHandler}
                 type="text"
-                name="search"
-                value={this.state.search}
+                name="query"
                 placeholder="Search Products"
-                
               ></input>
-              <input type="submit" value="Search"/>
+              <button id="searchButtonSubmit">Search</button>
             </form>
             {/* <Search placeholder="Search Products" onSearch={this.searchButtonHandler} enterButton /> */}
           
@@ -49,10 +44,10 @@ class NavBar extends React.Component {
               <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
             </li>
             <li>
-              <a className="accountNav">Sign-out </a>
+              <a className="accountNav">Sign-out</a>
             </li>
             <li>
-              <a className="accountNav">Account </a>
+              <a className="accountNav">Account</a>
             </li>
             <li id='cartIcon' >
               <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
@@ -65,34 +60,34 @@ class NavBar extends React.Component {
         <div id="subNav">
           <ul id="horizontal-list">
             <li>
-              <a href="#">Shop by Department:</a>
+              <a href="#" id="navCategoryItem">Shop by Department:</a>
             </li>
             <li>
-              <a href="#">Men</a>
+              <a href="#" id="navCategoryItem">Men</a>
             </li>
             <li>
-              <a href="#">Women</a>
+              <a href="#" id="navCategoryItem">Women</a>
             </li>
             <li>
-              <a href="#">Kids & Baby</a>
+              <a href="#" id="navCategoryItem">Kids & Baby</a>
             </li>
             <li>
-              <a href="#">Home</a>
+              <a href="#" id="navCategoryItem">Home</a>
             </li>
             <li>
-              <a href="#">Shoes</a>
+              <a href="#" id="navCategoryItem">Shoes</a>
             </li>
             <li>
-              <a href="#">Furniture</a>
+              <a href="#" id="navCategoryItem">Furniture</a>
             </li>
             <li>
-              <a href="#">Bed</a>
+              <a href="#" id="navCategoryItem">Bed</a>
             </li>
             <li>
-              <a href="#">Bath</a>
+              <a href="#" id="navCategoryItem">Bath</a>
             </li>
             <li>
-              <a href="#">Accessories</a>
+              <a href="#" id="navCategoryItem">Accessories</a>
             </li>
           </ul>
         </div>
