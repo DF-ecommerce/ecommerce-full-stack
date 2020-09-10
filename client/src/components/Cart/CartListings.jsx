@@ -2,6 +2,15 @@ import React from 'react';
 import CartListing from './CartListing.jsx';
 
 const CartListings = (props) => {
+  let total = 0;
+  let countTotal = () => {
+    for (let i = 0; i < props.inCart.length; i++) {
+      total += props.inCart[i].product_price
+    }
+    total = (Math.ceil(total * 100) / 100)
+  }
+  countTotal()
+  
   return (
     <div>
 
@@ -16,10 +25,16 @@ const CartListings = (props) => {
       ))}
       </div>
 
-        <div id="checkoutButtonContainer">
-        <button id="addToCartButton">
-          Checkout
-        </button>
+        <div id="checkoutSummaryContainer">
+          <div id="checkoutSummaryJustify">
+
+            <div id="totalPrice">Subtotal: </div>
+            <div id="totalPrice">{`$${total}`} </div>
+  
+            <button id="checkoutButton">
+              Checkout
+            </button>
+        </div>
       </div>
     </div>
   );

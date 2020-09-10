@@ -19,7 +19,7 @@ class Cart extends React.Component {
     Axios.get('/cart/incart').then((cart) => {
       this.setState({
         inCart: cart.data
-      });
+      }, () => console.log("this is incart object", this.state.inCart));
     });
   }
 
