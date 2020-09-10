@@ -235,6 +235,31 @@ li {
   transform: scale(0.99);
 }
 
+#checkoutButton {
+  border: none;
+  padding: 0.4rem 0.65rem;
+  margin: 0 30px;
+  background: #363636;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+#checkoutButton:hover, #checkoutButton:focus,
+#showReviewsButton:hover, #showReviewsButton:focus {
+ background: rgb(92, 92, 92);
+}
+
+#checkoutButton:focus, #showReviewsButton:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+#checkoutButton:active, #showReviewsButton:active {
+  transform: scale(0.99);
+}
+
 #reviewContainer {
   /* border: 1px solid red; */
   height: 10vh;
@@ -406,8 +431,19 @@ li {
   margin-bottom: 7%
 }
 
-#checkoutButtonContainer {
+#checkoutSummaryContainer {
   width: 100%;
-  text-align: right;
-  margin: 50px 0;
+  text-align: right
+}
+
+#checkoutSummaryJustify {
+  display: flex;
+  width: 37%;
+  align-items: center;
+  margin-left: auto;
+}
+
+#totalPrice {
+  margin: 20px 0 20px 5px;
+  font-weight: 600;
 }

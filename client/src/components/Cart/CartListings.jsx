@@ -16,10 +16,16 @@ const CartListings = (props) => {
       ))}
       </div>
 
-        <div id="checkoutButtonContainer">
-        <button id="addToCartButton">
-          Checkout
-        </button>
+        <div id="checkoutSummaryContainer">
+          <div id="checkoutSummaryJustify">
+
+            <div id="totalPrice">Subtotal: </div>
+            <div id="totalPrice">$1120 </div>
+  
+            <button id="checkoutButton">
+              Checkout
+            </button>
+        </div>
       </div>
     </div>
   );
