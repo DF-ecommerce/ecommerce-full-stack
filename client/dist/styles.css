@@ -238,7 +238,7 @@ li {
 #checkoutButton {
   border: none;
   padding: 0.4rem 0.65rem;
-  margin: 0 30px;
+  margin: 0 0 0 20px;
   background: #363636;
   color: #ffffff;
   font-size: 15px;
