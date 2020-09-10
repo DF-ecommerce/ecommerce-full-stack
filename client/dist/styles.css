@@ -114,6 +114,11 @@ li {
   font-weight: 300;
   font-size: 2vw;
   padding: 2%;
+  cursor: pointer;
+}
+
+.accountNav:hover {
+  font-weight: bold;
 }
 
 .bannerContainer {

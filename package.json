@@ -7,7 +7,6 @@
     "build": "webpack --w --mode development",
     "start": "nodemon",
     "watch": "webpack-dev-server --open",
-    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
