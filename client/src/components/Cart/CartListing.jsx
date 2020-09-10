@@ -44,7 +44,7 @@ class CartListing extends React.Component {
     return (
       <div id="cartListingContainer">
         <div id="cartListingImage">
-          <img src={this.props.inCart.product_image} height="250" width="180" />
+          <img className="cartListingImageTag" src={this.props.inCart.product_image} height="250" width="180" />
         </div>
         <div id="cartListingDescription">
           <p id="cartListingName">{this.props.inCart.product_name}</p>
