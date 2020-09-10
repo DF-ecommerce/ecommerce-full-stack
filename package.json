@@ -5,8 +5,10 @@
   "main": "./server/index.js",
   "scripts": {
     "build": "webpack --w --mode development",
+    "build-prod": "webpack --mode production",
     "start": "nodemon",
-    "watch": "webpack-dev-server --open",
+    "start-prod": "nodemon ./server/index.js",
+    "pm2-start": "./node_modules/.bin/pm2 start npm --no-automation --name D&F -- run start-prod"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
     "nodemon": "2.0.2",
     "path": "^0.12.7",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "pm2": "4.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
