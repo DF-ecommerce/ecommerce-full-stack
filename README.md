@@ -1,6 +1,14 @@
 # ecommerce-full-stack
 
-Welcome to D&F E-Commerce site! This is a shopping web application built with React.js, JavaScript, CSS, HTML, Node.js, Express.js, and MySQL. 
+Welcome to D&F E-Commerce site, a shopping web application built with:
+- React.js
+- JavaScript
+- Webpack
+- CSS
+- HTML
+- Node.js
+- Express.js
+- MySQL
 
 Features include: fully-functional main page that allows users to add items to cart, navigate to cart page, and make real-time changes to cart items.
 
