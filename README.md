@@ -1,6 +1,8 @@
-# ecommerce-full-stack
+# D&F E-commerce
 
-Welcome to D&F E-Commerce site, a shopping web application built with:
+Welcome to D&F E-Commerce site, a shopping web application built by Frankie Liu & Danny San.
+
+Tech stack:
 - React.js
 - JavaScript
 - Webpack
