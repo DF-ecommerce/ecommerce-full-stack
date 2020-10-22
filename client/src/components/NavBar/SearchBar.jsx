@@ -18,7 +18,7 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+    <form id="searchBar_form">
         <input
           id="searchBarInput"
         //   size="75" // couldn't get input sizing to work so in-line css for temp. solution
@@ -27,8 +27,8 @@ export default class SearchBar extends React.Component {
           name="query"
           placeholder="Search Products"
         ></input>
-        <button id="searchButtonSubmit">Search</button>
-      </div>
+        <button id="searchButtonSubmit" type="submit" onSubmit={this.props.searchButtonHandler}>Search</button>
+      </form>
     );
   }
 }

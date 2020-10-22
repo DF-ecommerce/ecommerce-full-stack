@@ -7,6 +7,7 @@ class NavBar extends React.Component {
       query: ''
     };
     this.searchInputHandler = this.searchInputHandler.bind(this);
+    this.searchButtonHandler = this.searchButtonHandler.bind(this);
   }
 
   searchInputHandler(e) {
@@ -16,6 +17,7 @@ class NavBar extends React.Component {
   }
 
   searchButtonHandler() {
+    console.log("search button clicked")
   }
 
   render() {
@@ -28,9 +30,7 @@ class NavBar extends React.Component {
         </div>
 
           <div class="searchBarContainer">
-            <form onSubmit={this.searchButtonHandler}>
-              <SearchBar/>
-            </form>
+            <SearchBar searchButtonHandler={this.searchButtonHandler}/>
           </div>
 
           <nav class="userPanel_wrapper">

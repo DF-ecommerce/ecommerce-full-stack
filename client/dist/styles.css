@@ -75,13 +75,16 @@ body {
 
 /* SEARCH-BAR */
 .searchBarContainer{
-  /* position: absolute;
-  margin-left: 25%;
-  margin-top: 3%;  */
+  display: flex;
+}
+
+#searchBar_form {
+  align-items: center;
+  display: flex;
 }
 
 #searchBarInput {
-  width: 75%;
+  width: 600px;
 }
 
 #searchButtonSubmit {
