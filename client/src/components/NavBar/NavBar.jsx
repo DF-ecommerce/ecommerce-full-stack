@@ -1,8 +1,5 @@
 import React from 'react';
-// import {Input} from 'antd'
-// import 'antd/dist/antd.css';
-// const {Search} = Input;
-
+import SearchBar from './SearchBar.jsx'
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +7,7 @@ class NavBar extends React.Component {
       query: ''
     };
     this.searchInputHandler = this.searchInputHandler.bind(this);
+    this.searchButtonHandler = this.searchButtonHandler.bind(this);
   }
 
   searchInputHandler(e) {
@@ -19,41 +17,27 @@ class NavBar extends React.Component {
   }
 
   searchButtonHandler() {
+    console.log("search button clicked")
   }
 
   render() {
     return (
       <div id="topNavContainer">
         <div id="mainNav">
-          <div id="searchBarContainer">
-            <form onSubmit={this.searchButtonHandler}>
-              <input id="searchBarInput"
-                size="75" // couldn't get input sizing to work so in-line css for temp. solution
-                onChange={this.searchInputHandler}
-                type="text"
-                name="query"
-                placeholder="Search Products"
-              ></input>
-              <button id="searchButtonSubmit">Search</button>
-            </form>
-            {/* <Search placeholder="Search Products" onSearch={this.searchButtonHandler} enterButton /> */}
-          
-          </div>
-          <ul>
-            <li >
-              <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
-            </li>
-            <li>
-              <a className="accountNav">Sign-out</a>
-            </li>
-            <li>
-              <a className="accountNav">Account</a>
-            </li>
-            <li id='cartIcon' >
-              <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
-            </li>
-          </ul>
 
+        <div class="logo_wrapper">
+            <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
+        </div>
+
+          <div class="searchBarContainer">
+            <SearchBar searchButtonHandler={this.searchButtonHandler}/>
+          </div>
+
+          <nav class="userPanel_wrapper">
+              <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
+              <a className="accountNav">Account</a>
+              <a className="accountNav">Sign-out</a>
+          </nav>
           
         </div>
 

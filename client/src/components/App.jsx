@@ -38,7 +38,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="wrapper">
+      <div id="app_container_wrapper">
         <NavBar onClickHandler={this.onClickHandler}/>
         {this.renderBodyHandler()}
         <Footer />
