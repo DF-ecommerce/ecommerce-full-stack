@@ -51,15 +51,15 @@ body {
 }
 
 /* MAIN NAV-BAR */
-#mainNav, ul{
+ul{
   margin: 0;
 }
 
 /* SEARCH-BAR */
 #searchBarContainer{
-  position: absolute;
+  /* position: absolute;
   margin-left: 25%;
-  margin-top: 3%; 
+  margin-top: 3%;  */
 }
 
 #searchBarInput {
@@ -110,13 +110,13 @@ li {
 
 /* NAV-BAR: CART, ACCOUNT, SIGN-OUT */
 .accountNav {
-  text-align: center;
-  margin-top: -6.5%;
-  float: right;
-  font-weight: 300;
-  font-size: 2vw;
-  padding: 2%;
-  cursor: pointer;
+  text-align: center; 
+    /* margin-top: -6.5%; */
+    /* float: right; */
+    /* font-weight: 300; */
+    font-size: 16px;
+    /* padding: 2%; */
+    cursor: pointer;
 }
 
 .accountNav:hover {

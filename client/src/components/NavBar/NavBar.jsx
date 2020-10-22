@@ -1,8 +1,5 @@
 import React from 'react';
-// import {Input} from 'antd'
-// import 'antd/dist/antd.css';
-// const {Search} = Input;
-
+import SearchBar from './SearchBar.jsx'
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -27,14 +24,7 @@ class NavBar extends React.Component {
         <div id="mainNav">
           <div id="searchBarContainer">
             <form onSubmit={this.searchButtonHandler}>
-              <input id="searchBarInput"
-                size="75" // couldn't get input sizing to work so in-line css for temp. solution
-                onChange={this.searchInputHandler}
-                type="text"
-                name="query"
-                placeholder="Search Products"
-              ></input>
-              <button id="searchButtonSubmit">Search</button>
+              <SearchBar/>
             </form>
             {/* <Search placeholder="Search Products" onSearch={this.searchButtonHandler} enterButton /> */}
           
