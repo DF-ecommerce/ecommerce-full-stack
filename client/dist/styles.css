@@ -17,6 +17,9 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+#app_container_wrapper {
+  overflow-x: hidden;
+}
 
 /* NAV-BAR CONTAINER */
 #topNavContainer {
@@ -49,8 +52,7 @@ body {
 
 /* MAIN NAV-BAR */
 #mainNav, ul{
-  margin-top: 0;
-  overflow: hidden;
+  margin: 0;
 }
 
 /* SEARCH-BAR */
