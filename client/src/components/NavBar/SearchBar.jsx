@@ -25,7 +25,7 @@ export default class SearchBar extends React.Component {
           onChange={this.searchInputHandler}
           type="text"
           name="query"
-          placeholder="Search Products"
+          placeholder="Type to search products"
         ></input>
         <button id="searchButtonSubmit" type="submit" onSubmit={this.props.searchButtonHandler}>Search</button>
       </form>
