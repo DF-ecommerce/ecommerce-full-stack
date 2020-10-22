@@ -16,7 +16,8 @@ class NavBar extends React.Component {
     });
   }
 
-  searchButtonHandler() {
+  searchButtonHandler(e) {
+    e.preventDefault();
     console.log("search button clicked")
   }
 
@@ -25,15 +26,15 @@ class NavBar extends React.Component {
       <div id="topNavContainer">
         <div id="mainNav">
 
-        <div class="logo_wrapper">
+        <div className="logo_wrapper">
             <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
         </div>
 
-          <div class="searchBarContainer">
+          <div className="searchBarContainer">
             <SearchBar searchButtonHandler={this.searchButtonHandler}/>
           </div>
 
-          <nav class="userPanel_wrapper">
+          <nav className="userPanel_wrapper">
               <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
               <a className="accountNav">Account</a>
               <a className="accountNav">Sign-out</a>
