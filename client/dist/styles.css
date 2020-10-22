@@ -29,15 +29,15 @@ body {
 }
 
 /* NAV-BAR: LOGO */
+.logo_wrapper {
+  margin-right: auto;
+}
+
 #logo {
-  display: block;
   font-family: "Dancing Script", Arial;
-  font-size: 5vw;
-  padding-top: 0.5%;
-  width: 150px;
-  max-width: 100%;
-  margin-right: 0;
-  cursor: pointer;  
+  font-size: 70px;
+  cursor: pointer; 
+  margin-left: 60px;
 }
 
 .loadingCircle {
@@ -51,12 +51,30 @@ body {
 }
 
 /* MAIN NAV-BAR */
-ul{
-  margin: 0;
+#mainNav {
+  display: flex;
+  width: 100%;
+}
+
+.userPanel_wrapper {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.accountNav {
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 55px;
+}
+
+.accountNav:hover {
+  font-weight: bold;
 }
 
 /* SEARCH-BAR */
-#searchBarContainer{
+.searchBarContainer{
   /* position: absolute;
   margin-left: 25%;
   margin-top: 3%;  */
@@ -109,19 +127,7 @@ li {
 }
 
 /* NAV-BAR: CART, ACCOUNT, SIGN-OUT */
-.accountNav {
-  text-align: center; 
-    /* margin-top: -6.5%; */
-    /* float: right; */
-    /* font-weight: 300; */
-    font-size: 16px;
-    /* padding: 2%; */
-    cursor: pointer;
-}
 
-.accountNav:hover {
-  font-weight: bold;
-}
 
 .bannerContainer {
   text-align: center;

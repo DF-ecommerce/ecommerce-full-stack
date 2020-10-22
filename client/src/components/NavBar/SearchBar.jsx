@@ -21,7 +21,7 @@ export default class SearchBar extends React.Component {
       <div>
         <input
           id="searchBarInput"
-          size="75" // couldn't get input sizing to work so in-line css for temp. solution
+        //   size="75" // couldn't get input sizing to work so in-line css for temp. solution
           onChange={this.searchInputHandler}
           type="text"
           name="query"

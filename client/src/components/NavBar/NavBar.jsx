@@ -22,28 +22,22 @@ class NavBar extends React.Component {
     return (
       <div id="topNavContainer">
         <div id="mainNav">
-          <div id="searchBarContainer">
+
+        <div class="logo_wrapper">
+            <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
+        </div>
+
+          <div class="searchBarContainer">
             <form onSubmit={this.searchButtonHandler}>
               <SearchBar/>
             </form>
-            {/* <Search placeholder="Search Products" onSearch={this.searchButtonHandler} enterButton /> */}
-          
           </div>
-          <ul>
-            <li >
-              <a id="logo" onClick={() => this.props.onClickHandler('mainBody')}>D&F</a>
-            </li>
-            <li>
-              <a className="accountNav">Sign-out</a>
-            </li>
-            <li>
-              <a className="accountNav">Account</a>
-            </li>
-            <li id='cartIcon' >
-              <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
-            </li>
-          </ul>
 
+          <nav class="userPanel_wrapper">
+              <a className="accountNav" onClick={() => this.props.onClickHandler('cart')}>Cart</a>
+              <a className="accountNav">Account</a>
+              <a className="accountNav">Sign-out</a>
+          </nav>
           
         </div>
 
