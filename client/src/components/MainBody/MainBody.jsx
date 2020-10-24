@@ -9,6 +9,7 @@ class MainBody extends React.Component {
       data: []
     };
     this.addToCartHandler = this.addToCartHandler.bind(this)
+    this.updateMainBodyData = this.updateMainBodyData.bind(this)
   }
   componentDidMount() {
     this.getData();
@@ -37,6 +38,12 @@ class MainBody extends React.Component {
       console.log(err)
     })
   }
+
+ updateMainBodyData(searchData) {
+   this.setState({
+     data: searchData
+   })
+ }
 
   render() {
     return (

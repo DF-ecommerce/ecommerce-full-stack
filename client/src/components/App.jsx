@@ -32,7 +32,7 @@ class App extends React.Component {
       return <div id="mainBodyContainer"><MainBody /></div>
     }
     if(display === 'cart'){
-      return <div><Cart /></div>
+      return <div className="cartComponent_wrapper"><Cart /></div>
     }
   }
 

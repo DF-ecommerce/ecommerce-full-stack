@@ -12,7 +12,7 @@ export default class SearchBar extends React.Component {
   searchInputHandler(e) {
     this.setState({
       [e.target.name]: e.target.value,
-    });
+    }, ()=>console.log(this.state));
   }
 
 
