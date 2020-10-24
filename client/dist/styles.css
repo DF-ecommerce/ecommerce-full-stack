@@ -492,3 +492,60 @@ li {
   margin: 20px 0 20px 5px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 1920px) {
+  .productDescriptionContainer {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  #ListingsDiv {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .searchBarContainer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #ListingsDiv {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .searchBarContainer {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 846px) {
+  #mainNav{
+    display: block;
+  }
+  #logo {
+    margin: 0;
+  }
+
+  .accountNav {
+    margin: auto;
+}
+
+  .bannerContainer{
+    width: 100%;
+  }
+
+  #ListingsDiv {
+    grid-template-columns: 1fr;
+  }
+
+  .searchBarContainer {
+    width: 70%;
+    margin: auto;
+  }
+
+  .logo_wrapper {
+    text-align: center;
+  }
+}
+
